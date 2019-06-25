@@ -22,6 +22,10 @@
 		32087A3122C2B205002BF9F0 /* ChildViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32087A3022C2B205002BF9F0 /* ChildViewController.xib */; };
 		32087A3322C2B216002BF9F0 /* ParentPortalViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32087A3222C2B216002BF9F0 /* ParentPortalViewController.xib */; };
 		32BFB25522C2D8D900A45D0D /* ApiController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32BFB25422C2D8D900A45D0D /* ApiController.swift */; };
+		32BFB25722C2E72D00A45D0D /* ParentPortalViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32BFB25622C2E72D00A45D0D /* ParentPortalViewController.storyboard */; };
+		32BFB25922C2E7B400A45D0D /* ParentPortalCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32BFB25822C2E7B400A45D0D /* ParentPortalCollectionViewController.swift */; };
+		32BFB25B22C2E85C00A45D0D /* ChildViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32BFB25A22C2E85C00A45D0D /* ChildViewController.storyboard */; };
+		32BFB25F22C2E94600A45D0D /* LoginViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32BFB25E22C2E94600A45D0D /* LoginViewController.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +48,10 @@
 		32087A3022C2B205002BF9F0 /* ChildViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChildViewController.xib; sourceTree = "<group>"; };
 		32087A3222C2B216002BF9F0 /* ParentPortalViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ParentPortalViewController.xib; sourceTree = "<group>"; };
 		32BFB25422C2D8D900A45D0D /* ApiController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiController.swift; sourceTree = "<group>"; };
+		32BFB25622C2E72D00A45D0D /* ParentPortalViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ParentPortalViewController.storyboard; sourceTree = "<group>"; };
+		32BFB25822C2E7B400A45D0D /* ParentPortalCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentPortalCollectionViewController.swift; sourceTree = "<group>"; };
+		32BFB25A22C2E85C00A45D0D /* ChildViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChildViewController.storyboard; sourceTree = "<group>"; };
+		32BFB25E22C2E94600A45D0D /* LoginViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginViewController.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +124,7 @@
 				32087A1F22C2B1AC002BF9F0 /* ChildViewController.swift */,
 				32087A2122C2B1AC002BF9F0 /* LoginViewController.swift */,
 				32087A1922C2B1AB002BF9F0 /* ParentPortalViewController.swift */,
+				32BFB25822C2E7B400A45D0D /* ParentPortalCollectionViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -132,8 +141,11 @@
 			isa = PBXGroup;
 			children = (
 				32087A2E22C2B1F4002BF9F0 /* LoginViewController.xib */,
-				32087A3022C2B205002BF9F0 /* ChildViewController.xib */,
+				32BFB25E22C2E94600A45D0D /* LoginViewController.storyboard */,
 				32087A3222C2B216002BF9F0 /* ParentPortalViewController.xib */,
+				32BFB25622C2E72D00A45D0D /* ParentPortalViewController.storyboard */,
+				32087A3022C2B205002BF9F0 /* ChildViewController.xib */,
+				32BFB25A22C2E85C00A45D0D /* ChildViewController.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -201,6 +213,9 @@
 				32087A0C22C2AF8D002BF9F0 /* Assets.xcassets in Resources */,
 				32087A2F22C2B1F4002BF9F0 /* LoginViewController.xib in Resources */,
 				32087A3122C2B205002BF9F0 /* ChildViewController.xib in Resources */,
+				32BFB25F22C2E94600A45D0D /* LoginViewController.storyboard in Resources */,
+				32BFB25722C2E72D00A45D0D /* ParentPortalViewController.storyboard in Resources */,
+				32BFB25B22C2E85C00A45D0D /* ChildViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -215,6 +230,7 @@
 				32087A2922C2B1AC002BF9F0 /* ParentModel.swift in Sources */,
 				32BFB25522C2D8D900A45D0D /* ApiController.swift in Sources */,
 				32087A2222C2B1AC002BF9F0 /* ParentPortalViewController.swift in Sources */,
+				32BFB25922C2E7B400A45D0D /* ParentPortalCollectionViewController.swift in Sources */,
 				32087A2722C2B1AC002BF9F0 /* Bearer.swift in Sources */,
 				32087A2422C2B1AC002BF9F0 /* FoodEntryModel.swift in Sources */,
 				32087A2522C2B1AC002BF9F0 /* User.swift in Sources */,
