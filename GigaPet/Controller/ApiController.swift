@@ -32,7 +32,7 @@ enum NetWorkError: Error {
 // MARK: - Beginning of SignUpSignInController Class
 //
 
-class SignUpSignInController {
+class ApiController {
     
     //
     //MARK: - Properties
@@ -40,7 +40,7 @@ class SignUpSignInController {
     
     private let baseUrl = URL(string: "ADDED PLACEHOLDER")
     var bearer: Bearer?
-    
+    var children: [Child] = []
     //
     // MARK: - SignUp Function
     //
@@ -129,5 +129,106 @@ class SignUpSignInController {
             }.resume()
     }
     
+    //
+    // MARK: - Fetch all children Function
+    //
     
+    func fetchAllChildren(completion: @escaping (Result<[Child], NetWorkError>) -> Void) {
+        guard let bearer = bearer else {
+            completion(.failure(.noAuth))
+            return
+        }
+        guard let allChildrenUrl = baseUrl?.appendingPathComponent("ADDED PLACEHOLDER FOR ENDPOINT") else {
+            completion(.failure(.otherError))
+            return
+        }
+        
+        var request = URLRequest(url: allChildrenUrl)
+        request.httpMethod = HTTPMethod.get.rawValue
+        request.addValue("ADDED PLACEHOLDER FOR BEARER TOKEN \(bearer.token)", forHTTPHeaderField: "Authorization")
+        
+        URLSession.shared.dataTask(with: request) { (data, response, error) in
+            
+            if let response = response as? HTTPURLResponse,
+                response.statusCode == 401 {
+                completion(.failure(.badAuth))
+                return
+            }
+            
+            if let _ = error {
+                completion(.failure(.otherError))
+                return
+            }
+            
+            guard let data = data else {
+                completion(.failure(.badData))
+                return
+            }
+            
+            let decoder = JSONDecoder()
+            
+            do {
+                let children = try decoder.decode([Child].self, from: data)
+                completion(.success(children))
+            }catch {
+                completion(.failure(.noDecode))
+                return
+            }
+        }.resume()
+    }
+    
+    //
+    // MARK: - Add Child
+    //
+    
+    func addChild (newChild: Child, completion: @escaping(Error?
+        ) -> Void) {
+        
+        guard let bearer = bearer else {
+            print("Error getting token")
+            return
+        }
+        
+        guard let newChildUrl = baseUrl?.appendingPathComponent("ADDED PLACEHOLDER FOR ENDPOINT") else { return }
+        
+        var request = URLRequest(url: newChildUrl)
+        request.httpMethod = HTTPMethod.post.rawValue
+        request.addValue("ADDED PLACEHOLER \(bearer.token)", forHTTPHeaderField: "Authorization")
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        
+        let jsonEncoder = JSONEncoder()
+        
+        do {
+            let jsonData = try jsonEncoder.encode(newChild)
+            request.httpBody = jsonData
+        }catch {
+            print("error Encoding Data")
+        }
+        
+        URLSession.shared.dataTask(with: request) { (data, response, error) in
+            
+            if let response = response as? HTTPURLResponse,
+                response.statusCode != 200 { //error response 200 is OK or sucessful response
+                completion(NSError(domain: "", code: response.statusCode, userInfo: nil))
+                return
+            }
+            if let error = error {
+                completion(error)
+                return
+            }
+            
+            guard let data = data else {
+                print("error no data")
+                return
+            }
+            
+            do {
+                let decoder = JSONDecoder()
+                let newChild = try decoder.decode(Child.self, from: data)
+                self.children.append(newChild)
+            }catch {
+                completion(error)
+            }
+        }
+    }
 }
