@@ -9,14 +9,149 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="VCR_OSD_MONO_1.001.ttf">
+            <string>VCROSDMono</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="GigaPet" customModuleProvider="target"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Rectangle" translatesAutoresizingMaskIntoConstraints="NO" id="lVn-kw-nIj">
+                    <rect key="frame" x="-51" y="534" width="517" height="362"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Combined Shape" translatesAutoresizingMaskIntoConstraints="NO" id="5DM-iI-wzN">
+                    <rect key="frame" x="-17" y="274" width="449" height="403"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PinClipart.com_easy-clip-art_709669" translatesAutoresizingMaskIntoConstraints="NO" id="g7x-ai-MOz">
+                    <rect key="frame" x="161" y="285" width="93" height="74"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="93" id="0Jk-Gx-ZOe"/>
+                        <constraint firstAttribute="height" constant="74" id="hHF-hl-NZn"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8TR-iG-qik">
+                    <rect key="frame" x="211" y="367" width="49" height="28"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="28" id="39k-9v-kfk"/>
+                        <constraint firstAttribute="width" constant="49" id="CYC-92-knb"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="VCROSDMono" family="VCR OSD Mono" pointSize="8"/>
+                    <state key="normal" title="Sign In" backgroundImage="Rectangle3">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a0Q-q1-j58">
+                    <rect key="frame" x="161" y="367" width="49" height="28"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="28" id="Cte-cr-Zlc"/>
+                        <constraint firstAttribute="width" constant="49" id="TFd-xP-w87"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="VCROSDMono" family="VCR OSD Mono" pointSize="8"/>
+                    <state key="normal" title="Sign Up" backgroundImage="Rectangle3">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                </button>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="kitchentable_tafu1e 2" translatesAutoresizingMaskIntoConstraints="NO" id="4Gh-wY-RRX">
+                    <rect key="frame" x="0.0" y="781" width="270" height="151"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="kitchentable_tafu1e 2" translatesAutoresizingMaskIntoConstraints="NO" id="wal-UE-d4j">
+                    <rect key="frame" x="163" y="781" width="270" height="151"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="USERNAME" translatesAutoresizingMaskIntoConstraints="NO" id="7lr-8t-5px">
+                    <rect key="frame" x="144" y="404" width="127" height="52"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="52" id="Lko-52-vAS"/>
+                        <constraint firstAttribute="width" constant="127" id="wJc-G2-pMj"/>
+                    </constraints>
+                </imageView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PASSWORD" translatesAutoresizingMaskIntoConstraints="NO" id="kdq-iJ-Iom">
+                    <rect key="frame" x="143" y="492" width="127.00000000000011" height="66.5"/>
+                </imageView>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="A55-om-OPs">
+                    <rect key="frame" x="70" y="454" width="274" height="30"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ae9-Ah-w9A">
+                    <rect key="frame" x="70" y="543" width="274" height="30"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n11-gO-Ztj">
+                    <rect key="frame" x="106" y="590" width="200" height="70"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="200" id="rSw-5f-9Lm"/>
+                        <constraint firstAttribute="height" constant="70" id="tt1-AS-baq"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="VCROSDMono" family="VCR OSD Mono" pointSize="17"/>
+                    <state key="normal" title="Register" backgroundImage="Rectangle2">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                </button>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GigaPet" translatesAutoresizingMaskIntoConstraints="NO" id="fAP-5d-3bj">
+                    <rect key="frame" x="70" y="112" width="274" height="165"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="165" id="15u-O1-zDT"/>
+                        <constraint firstAttribute="width" constant="274" id="FSb-lK-zF6"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="0.94901960784313721" green="0.92941176470588238" blue="0.63529411764705879" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="kdq-iJ-Iom" secondAttribute="trailing" constant="144" id="5ZR-hM-SX5"/>
+                <constraint firstItem="a0Q-q1-j58" firstAttribute="top" secondItem="g7x-ai-MOz" secondAttribute="bottom" constant="8" id="68P-L4-lhn"/>
+                <constraint firstItem="A55-om-OPs" firstAttribute="top" secondItem="8TR-iG-qik" secondAttribute="bottom" constant="59" id="96K-vx-4JX"/>
+                <constraint firstItem="n11-gO-Ztj" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="106" id="BQw-Q4-mhb"/>
+                <constraint firstItem="n11-gO-Ztj" firstAttribute="top" secondItem="ae9-Ah-w9A" secondAttribute="bottom" constant="17" id="DYE-tj-aBE"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="8TR-iG-qik" secondAttribute="trailing" constant="154" id="EjB-v8-ij3"/>
+                <constraint firstItem="g7x-ai-MOz" firstAttribute="top" secondItem="fAP-5d-3bj" secondAttribute="bottom" constant="8" id="Fv7-pd-nd1"/>
+                <constraint firstItem="kdq-iJ-Iom" firstAttribute="top" secondItem="A55-om-OPs" secondAttribute="bottom" constant="8" id="Gno-oh-Qet"/>
+                <constraint firstItem="ae9-Ah-w9A" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="70" id="LbP-Bw-l8I"/>
+                <constraint firstItem="a0Q-q1-j58" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="161" id="LdR-Zb-MYu"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="7lr-8t-5px" secondAttribute="trailing" constant="143" id="PIJ-CO-E86"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="ae9-Ah-w9A" secondAttribute="trailing" constant="70" id="PIQ-J2-I5B"/>
+                <constraint firstItem="ae9-Ah-w9A" firstAttribute="top" secondItem="A55-om-OPs" secondAttribute="bottom" constant="59" id="QjJ-bw-fmC"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="g7x-ai-MOz" secondAttribute="trailing" constant="160" id="RT8-OF-TE9"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="fAP-5d-3bj" secondAttribute="trailing" constant="70" id="Xac-LW-VD9"/>
+                <constraint firstItem="kdq-iJ-Iom" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="143" id="Y4i-Me-SXs"/>
+                <constraint firstItem="fAP-5d-3bj" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="68" id="ZLd-oL-SZd"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="n11-gO-Ztj" secondAttribute="trailing" constant="108" id="dae-oV-7ya"/>
+                <constraint firstItem="7lr-8t-5px" firstAttribute="top" secondItem="8TR-iG-qik" secondAttribute="bottom" constant="9" id="dmW-zI-IB6"/>
+                <constraint firstItem="fAP-5d-3bj" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="70" id="eel-h5-ont"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="A55-om-OPs" secondAttribute="trailing" constant="70" id="hg2-2D-A23"/>
+                <constraint firstItem="A55-om-OPs" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="70" id="luA-HJ-LtM"/>
+                <constraint firstItem="g7x-ai-MOz" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="161" id="mSL-ZP-8bQ"/>
+                <constraint firstItem="8TR-iG-qik" firstAttribute="top" secondItem="g7x-ai-MOz" secondAttribute="bottom" constant="8" id="umx-r7-4zo"/>
+                <constraint firstItem="7lr-8t-5px" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="144" id="vv1-qa-mYe"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="131.8840579710145" y="136.60714285714286"/>
         </view>
+        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="Mvl-Tc-iIV">
+            <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+        </imageView>
     </objects>
+    <resources>
+        <image name="Combined Shape" width="102.66666412353516" height="134.66667175292969"/>
+        <image name="GigaPet" width="109.33333587646484" height="41.666667938232422"/>
+        <image name="PASSWORD" width="443" height="66.666664123535156"/>
+        <image name="PinClipart.com_easy-clip-art_709669" width="33" height="66.666664123535156"/>
+        <image name="Rectangle" width="138" height="120.66666412353516"/>
+        <image name="Rectangle2" width="61.333332061767578" height="17.666666030883789"/>
+        <image name="Rectangle3" width="38" height="19.333333969116211"/>
+        <image name="USERNAME" width="413.33334350585938" height="66.666664123535156"/>
+        <image name="kitchentable_tafu1e 2" width="223.33332824707031" height="66.666664123535156"/>
+    </resources>
 </document>
