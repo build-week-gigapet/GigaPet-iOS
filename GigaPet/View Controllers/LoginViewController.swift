@@ -38,14 +38,14 @@ class LoginViewController: UIViewController {
     //
     
     @IBAction func loginButtonTapped(_ sender: UIButton) {
-        guard let signUpSignInController = signUpSignInController else { return }
+        guard let apiController = apiController else { return }
         if let username = usernameTextField.text,
            !username.isEmpty,
            let password = passwordTextField.text,
            !password.isEmpty {
             let user = User(username: username, password: password)
             if loginType == .signUp {
-                signUpSignInController.signUp(with: user) { error in
+                apiController.signUp(with: user) { error in
                     if let error = error {
                         print("ERROR OCCURED FURING SIGN UP: \(error)")
                     }else {
@@ -62,7 +62,7 @@ class LoginViewController: UIViewController {
                     }
                 }
             }else {
-                signUpSignInController.signIn(with: user) { error in
+                apiController.signIn(with: user) { error in
                     if let error = error {
                         print("ERROR DURING SIGN IN: \(error)")
                     }else {
