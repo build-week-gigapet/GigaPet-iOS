@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0EF-3L-hYO">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Welcome to Gigapet-->
+        <scene sceneID="6YG-c9-pmj">
+            <objects>
+                <collectionViewController id="bEz-1C-v1m" customClass="ParentPortalCollectionViewController" customModule="GigaPet" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="gwU-xU-zTc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="kKM-fi-61i">
+                            <size key="itemSize" width="120" height="120"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="l4C-52-T9L">
+                                <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                    <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </view>
+                                <connections>
+                                    <segue destination="2zS-PH-68j" kind="show" id="zmb-8X-pvY"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="bEz-1C-v1m" id="ojH-ek-KQM"/>
+                            <outlet property="delegate" destination="bEz-1C-v1m" id="TZ7-B7-iMt"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" title="Welcome to Gigapet" id="1t4-Yf-WUE">
+                        <barButtonItem key="leftBarButtonItem" title="Logout" id="bzT-fi-hVV"/>
+                        <barButtonItem key="rightBarButtonItem" title="Add Child" id="Qjp-Us-jWD">
+                            <connections>
+                                <segue destination="2zS-PH-68j" kind="show" id="edr-k7-gdw"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sDA-aE-C9Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1089.8550724637682" y="209.59821428571428"/>
+        </scene>
+        <!--LoginViewController-->
+        <scene sceneID="hEw-Ek-fe7">
+            <objects>
+                <viewControllerPlaceholder storyboardName="LoginViewController" referencedIdentifier="LoginViewController" id="UbC-ED-I3W" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yph-He-U9n" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1108" y="601"/>
+        </scene>
+        <!--ChildViewController-->
+        <scene sceneID="HTy-o5-3cf">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="ChildViewController" storyboardName="ChildViewController" id="2zS-PH-68j" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="33m-hR-r2C" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1682" y="-21"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="NGK-Oz-EdO">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0EF-3L-hYO" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="WA6-6u-hic">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="bEz-1C-v1m" kind="relationship" relationship="rootViewController" id="uXZ-s9-Vd0"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y8x-48-hIX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="179.71014492753625" y="209.59821428571428"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="edr-k7-gdw"/>
+    </inferredMetricsTieBreakers>
+</document>
