@@ -32,7 +32,7 @@ enum NetWorkError: Error {
 // MARK: - Beginning of SignUpSignInController Class
 //
 
-class SignUpSignInController {
+class ApiController {
     
     //
     //MARK: - Properties
@@ -129,5 +129,51 @@ class SignUpSignInController {
             }.resume()
     }
     
+    //
+    // MARK: - Fetch all children Function
+    //
     
+    func fetchAllChildren(completion: @escaping (Result<[Child], NetWorkError>) -> Void) {
+        guard let bearer = bearer else {
+            completion(.failure(.noAuth))
+            return
+        }
+        guard let allChildrenUrl = baseUrl?.appendingPathComponent("ADDED PLACEHOLDER FOR ENDPOINT") else {
+            completion(.failure(.otherError))
+            return
+        }
+        
+        var request = URLRequest(url: allChildrenUrl)
+        request.httpMethod = HTTPMethod.get.rawValue
+        request.addValue("ADDED PLACEHOLDER FOR BEARER TOKEN \(bearer.token)", forHTTPHeaderField: "Authorization")
+        
+        URLSession.shared.dataTask(with: request) { (data, response, error) in
+            
+            if let response = response as? HTTPURLResponse,
+                response.statusCode == 401 {
+                completion(.failure(.badAuth))
+                return
+            }
+            
+            if let _ = error {
+                completion(.failure(.otherError))
+                return
+            }
+            
+            guard let data = data else {
+                completion(.failure(.badData))
+                return
+            }
+            
+            let decoder = JSONDecoder()
+            
+            do {
+                let children = try decoder.decode([Child].self, from: data)
+                completion(.success(children))
+            }catch {
+                completion(.failure(.noDecode))
+                return
+            }
+        }.resume()
+    }
 }

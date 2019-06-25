@@ -24,7 +24,7 @@ class LoginViewController: UIViewController {
     @IBOutlet private weak var passwordTextField: UITextField!
     @IBOutlet private weak var signInButton: UIButton!
     
-    var signUpSignInController: SignUpSignInController?
+    var apiController: ApiController?
     var loginType = LoginType.signUp
 
     override func viewDidLoad() {
