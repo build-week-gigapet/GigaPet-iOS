@@ -71,11 +71,12 @@
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xk0-1t-vTX">
                                             <rect key="frame" x="0.0" y="0.0" width="172" height="190"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ktq-xO-Kbj">
-                                                    <rect key="frame" x="0.0" y="0.0" width="172" height="190"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ktq-xO-Kbj">
+                                                    <rect key="frame" x="0.0" y="0.0" width="172" height="140"/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name Placeholder" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sYn-iT-V1X">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name Placeholder" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sYn-iT-V1X">
                                                     <rect key="frame" x="0.0" y="139" width="172" height="51"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="VCROSDMono" family="VCR OSD Mono" pointSize="14"/>
                                                     <color key="textColor" red="0.50980392156862742" green="0.16862745098039217" blue="0.85098039215686272" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -83,14 +84,10 @@
                                             </subviews>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="sYn-iT-V1X" secondAttribute="bottom" id="3n4-es-nzm"/>
                                                 <constraint firstItem="Ktq-xO-Kbj" firstAttribute="top" secondItem="xk0-1t-vTX" secondAttribute="top" id="7iW-zA-8cv"/>
-                                                <constraint firstItem="sYn-iT-V1X" firstAttribute="top" secondItem="xk0-1t-vTX" secondAttribute="top" constant="139" id="Euq-JS-isa"/>
                                                 <constraint firstItem="Ktq-xO-Kbj" firstAttribute="leading" secondItem="xk0-1t-vTX" secondAttribute="leading" id="IT0-R7-i2L"/>
                                                 <constraint firstItem="Ktq-xO-Kbj" firstAttribute="top" secondItem="xk0-1t-vTX" secondAttribute="top" id="JqK-ZO-K0f"/>
                                                 <constraint firstItem="Ktq-xO-Kbj" firstAttribute="leading" secondItem="xk0-1t-vTX" secondAttribute="leading" id="Jwj-NC-iIp"/>
-                                                <constraint firstItem="sYn-iT-V1X" firstAttribute="leading" secondItem="xk0-1t-vTX" secondAttribute="leading" id="RcE-rT-yOt"/>
-                                                <constraint firstAttribute="trailing" secondItem="sYn-iT-V1X" secondAttribute="trailing" id="TmA-pf-F6u"/>
                                                 <constraint firstAttribute="bottom" secondItem="Ktq-xO-Kbj" secondAttribute="bottom" id="fEf-l0-1qC"/>
                                                 <constraint firstAttribute="trailing" secondItem="Ktq-xO-Kbj" secondAttribute="trailing" id="uPV-AF-M4S"/>
                                                 <constraint firstAttribute="trailing" secondItem="Ktq-xO-Kbj" secondAttribute="trailing" id="zKf-1z-SUR"/>
