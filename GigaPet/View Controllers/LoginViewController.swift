@@ -13,7 +13,7 @@ enum LoginType {
     case signIn
 }
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, UITextFieldDelegate {
     
     //
     //MARK: - IBOutlets and Properties
@@ -36,7 +36,10 @@ class LoginViewController: UIViewController {
     //
     
     @IBAction func loginButtonTapped(_ sender: UIButton) {
-        guard let apiController = apiController else { return }
+        
+        guard let apiController = apiController else {
+            print("Error loading ApiController")
+            return }
         if let username = usernameTextField.text,
            !username.isEmpty,
            let password = passwordTextField.text,

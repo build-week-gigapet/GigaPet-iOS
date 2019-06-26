@@ -9,7 +9,7 @@
 import UIKit
 
 private let reuseIdentifier = "ChildCell"
-let apiController = ApiController()
+private var apiController = ApiController()
 
 class ParentPortalCollectionViewController: UICollectionViewController {
     
@@ -27,6 +27,7 @@ class ParentPortalCollectionViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.delegate = self
+        self.reloadInputViews()
     }
     
     override func viewDidAppear(_ animated: Bool) {

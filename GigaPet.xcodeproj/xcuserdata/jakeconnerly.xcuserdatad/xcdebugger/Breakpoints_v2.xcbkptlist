@@ -2,4 +2,118 @@
 <Bucket
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GigaPet/View Controllers/LoginViewController.swift"
+            timestampString = "583275841.122566"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
+            landmarkName = "loginButtonTapped(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GigaPet.LoginViewController.loginButtonTapped(__C.UIButton) -&gt; ()"
+                  moduleName = "GigaPet"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jakeconnerly/Desktop/iOS7/BuildWeek1/GigaPet-iOS/GigaPet/View%20Controllers/LoginViewController.swift"
+                  timestampString = "583275841.13666"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "49"
+                  endingLineNumber = "49"
+                  offsetFromSymbolStart = "1436">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Error&gt;) -&gt; () in GigaPet.LoginViewController.loginButtonTapped(__C.UIButton) -&gt; ()"
+                  moduleName = "GigaPet"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jakeconnerly/Desktop/iOS7/BuildWeek1/GigaPet-iOS/GigaPet/View%20Controllers/LoginViewController.swift"
+                  timestampString = "583275841.141125"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "50"
+                  endingLineNumber = "50"
+                  offsetFromSymbolStart = "180">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GigaPet/View Controllers/LoginViewController.swift"
+            timestampString = "583275841.123008"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "LoginViewController"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GigaPet/View Controllers/ParentPortalCollectionViewController.swift"
+            timestampString = "583275841.1232769"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "12"
+            endingLineNumber = "12"
+            landmarkName = "unknown"
+            landmarkType = "0">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "globalinit_33_C2F1F9FAE4CC5ADD1E848F61422B51BF_func1"
+                  moduleName = "GigaPet"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jakeconnerly/Desktop/iOS7/BuildWeek1/GigaPet-iOS/GigaPet/View%20Controllers/ParentPortalCollectionViewController.swift"
+                  timestampString = "583275841.206026"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "11">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GigaPet.(apiController in _C2F1F9FAE4CC5ADD1E848F61422B51BF).unsafeMutableAddressor : GigaPet.ApiController"
+                  moduleName = "GigaPet"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jakeconnerly/Desktop/iOS7/BuildWeek1/GigaPet-iOS/GigaPet/View%20Controllers/ParentPortalCollectionViewController.swift"
+                  timestampString = "583275841.208638"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "4">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 //
 // MARK: - HTTPMethod & Error enums
@@ -29,7 +30,7 @@ enum NetWorkError: Error {
 }
 
 //
-// MARK: - Beginning of SignUpSignInController Class
+// MARK: - Beginning of APIController Class
 //
 
 class ApiController {
@@ -38,20 +39,21 @@ class ApiController {
     //MARK: - Properties
     //
     
-    private let baseUrl = URL(string: "ADDED PLACEHOLDER")
+    private let baseUrl = URL(string: "http://bw-gigapet.herokuapp.com/")!
     var bearer: Bearer?
     var children: [Child] = []
     var childDetailArray: [ChildDetail] = []
+    
     //
     // MARK: - SignUp Function
     //
     
     func signUp(with user: User, completion: @escaping (Error?) -> ()) {
-        guard let signUpUrl = baseUrl?.appendingPathComponent("") else { return }
+        let signUpUrl = baseUrl.appendingPathComponent("createnewuser")
         
         var request = URLRequest(url: signUpUrl)
         request.httpMethod = HTTPMethod.post.rawValue
-        request.setValue("ADDED PLACEHOLDER", forHTTPHeaderField: "ADDED PLACEHOLDER")
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         
         let jsonEncoder = JSONEncoder()
         do {
@@ -67,7 +69,6 @@ class ApiController {
             if let response = response as? HTTPURLResponse,
                 response.statusCode != 200 {
                 completion(NSError(domain: "", code: response.statusCode, userInfo: nil))
-                
                 return
             }
             if let error = error {
@@ -75,7 +76,7 @@ class ApiController {
                 return
             }
             completion(nil)
-            }.resume()
+        }.resume()
     }
     
     //
@@ -83,10 +84,8 @@ class ApiController {
     //
     
     func signIn(with user: User, completion: @escaping (Error?) -> ()) {
-        guard let signInUrl = baseUrl?.appendingPathComponent("ADDED PLACEHOLDER FOR ENDPOINT") else {
-            print("ERROR ASSIGING SIGNINURL LINE 86 SIGNUPSIGNINCONTROLLER")
-            return
-        }
+        
+        let signInUrl = baseUrl.appendingPathComponent("ADDED PLACEHOLDER FOR ENDPOINT")
         
         var request = URLRequest(url: signInUrl)
         request.httpMethod = HTTPMethod.post.rawValue //setting up ability to send info to api
@@ -139,10 +138,9 @@ class ApiController {
             completion(.failure(.noAuth))
             return
         }
-        guard let allChildrenUrl = baseUrl?.appendingPathComponent("ADDED PLACEHOLDER FOR ENDPOINT") else {
+        let allChildrenUrl = baseUrl.appendingPathComponent("ADDED PLACEHOLDER FOR ENDPOINT")
             completion(.failure(.otherError))
-            return
-        }
+
         
         var request = URLRequest(url: allChildrenUrl)
         request.httpMethod = HTTPMethod.get.rawValue
@@ -189,7 +187,7 @@ class ApiController {
             return
         }
         
-        guard let newChildUrl = baseUrl?.appendingPathComponent("ADDED PLACEHOLDER FOR ENDPOINT") else { return }
+        let newChildUrl = baseUrl.appendingPathComponent("ADDED PLACEHOLDER FOR ENDPOINT")
         
         var request = URLRequest(url: newChildUrl)
         request.httpMethod = HTTPMethod.post.rawValue
