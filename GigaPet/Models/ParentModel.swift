@@ -1,5 +1,5 @@
 //
-//  ParentModel.swift
+//  NewUser.swift
 //  GigaPet
 //
 //  Created by Jake Connerly on 6/24/19.
@@ -9,7 +9,15 @@
 import Foundation
 
 struct Parent: Codable {
-    var id: Int
-    var name: String
-    var children: [Child]
+    let username: String
+    let password: String
+    let name: String
+    var children: [Child]?
+    
+    init(username: String, password: String) {
+        self.username = username
+        self.password = password
+        self.name = ""
+        self.children = []
+    }
 }

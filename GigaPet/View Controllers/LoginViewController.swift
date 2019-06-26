@@ -44,7 +44,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
            !username.isEmpty,
            let password = passwordTextField.text,
            !password.isEmpty {
-            let user = User(username: username, password: password)
+            let user = Parent(username: username, password: password)
             if loginType == .signUp {
                 apiController.signUp(with: user) { error in
                     if let error = error {

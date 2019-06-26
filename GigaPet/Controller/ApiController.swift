@@ -42,13 +42,13 @@ class ApiController {
     private let baseUrl = URL(string: "http://bw-gigapet.herokuapp.com/")!
     var bearer: Bearer?
     var children: [Child] = []
-    var childDetailArray: [ChildDetail] = []
+    var parent: Parent?
     
     //
     // MARK: - SignUp Function
     //
     
-    func signUp(with user: User, completion: @escaping (Error?) -> ()) {
+    func signUp(with user: Parent, completion: @escaping (Error?) -> ()) {
         let signUpUrl = baseUrl.appendingPathComponent("createnewuser")
         
         var request = URLRequest(url: signUpUrl)
@@ -83,7 +83,7 @@ class ApiController {
     // MARK: - SignIn Function
     //
     
-    func signIn(with user: User, completion: @escaping (Error?) -> ()) {
+    func signIn(with user: Parent, completion: @escaping (Error?) -> ()) {
         
         let signInUrl = baseUrl.appendingPathComponent("ADDED PLACEHOLDER FOR ENDPOINT")
         
@@ -224,7 +224,8 @@ class ApiController {
                 let decoder = JSONDecoder()
                 let newChild = try decoder.decode(Child.self, from: data)
                 self.children.append(newChild)
-            }catch {
+                self.parent?.children?.append(newChild)
+            } catch {
                 completion(error)
             }
         }

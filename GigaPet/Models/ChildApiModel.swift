@@ -10,4 +10,7 @@ import Foundation
 
 struct Child: Codable {
     var name: String
+    var favorites: String
+    var allergies: String
+    var foodEntries: [FoodEntry]
 }
