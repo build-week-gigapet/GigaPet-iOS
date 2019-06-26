@@ -23,7 +23,7 @@
                     <navigationItem key="navigationItem" title="Child Name" id="sB7-55-PBT">
                         <barButtonItem key="leftBarButtonItem" title="Back" id="NZP-vZ-tFi">
                             <connections>
-                                <segue destination="Sdq-uK-iga" kind="unwind" unwindAction="unwindToParent:" id="LUq-62-liI"/>
+                                <segue destination="Sdq-uK-iga" kind="unwind" unwindAction="unwindToParent:" id="qDH-Vi-6a2"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Add Food Item" id="qJT-ZB-EHj"/>
