@@ -32,7 +32,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </view>
                                 <connections>
-                                    <segue destination="2zS-PH-68j" kind="show" id="zmb-8X-pvY"/>
+                                    <segue destination="2zS-PH-68j" kind="show" identifier="ShowChildSegue" id="zmb-8X-pvY"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -45,27 +45,30 @@
                         <barButtonItem key="leftBarButtonItem" title="Logout" id="bzT-fi-hVV"/>
                         <barButtonItem key="rightBarButtonItem" title="Add Child" id="Qjp-Us-jWD">
                             <connections>
-                                <segue destination="2zS-PH-68j" kind="show" id="edr-k7-gdw"/>
+                                <segue destination="2zS-PH-68j" kind="show" identifier="AddChildSegue" id="edr-k7-gdw"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="0Ys-Sf-Yuu" kind="presentation" identifier="LoginViewModalSegue" id="0yc-Np-vNV"/>
+                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sDA-aE-C9Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1089.8550724637682" y="209.59821428571428"/>
+            <point key="canvasLocation" x="997" y="210"/>
         </scene>
         <!--LoginViewController-->
-        <scene sceneID="hEw-Ek-fe7">
+        <scene sceneID="eLY-iu-nln">
             <objects>
-                <viewControllerPlaceholder storyboardName="LoginViewController" referencedIdentifier="LoginViewController" id="UbC-ED-I3W" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Yph-He-U9n" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardIdentifier="LoginViewController" storyboardName="LoginViewController" referencedIdentifier="LoginViewController" id="0Ys-Sf-Yuu" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="smY-zY-sG5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1108" y="601"/>
+            <point key="canvasLocation" x="996" y="631"/>
         </scene>
         <!--ChildViewController-->
         <scene sceneID="HTy-o5-3cf">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="ChildViewController" storyboardName="ChildViewController" id="2zS-PH-68j" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardIdentifier="ChildViewController" storyboardName="ChildViewController" referencedIdentifier="ChildViewController" id="2zS-PH-68j" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="33m-hR-r2C" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1682" y="-21"/>
@@ -90,6 +93,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="edr-k7-gdw"/>
+        <segue reference="zmb-8X-pvY"/>
     </inferredMetricsTieBreakers>
 </document>
