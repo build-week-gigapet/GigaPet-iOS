@@ -84,10 +84,11 @@ class ParentPortalCollectionViewController: UICollectionViewController {
                     detailVC.child = apiController.children[indexPath.row]
                 }
                 detailVC.apiController = apiController
-                
-            
             }
-            
+        }else if segue.identifier == "LoginViewModalSegue" {
+            if let loginVC = segue.destination as? LoginViewController {
+                loginVC.apiController = apiController
+            }
         }
     }
 
