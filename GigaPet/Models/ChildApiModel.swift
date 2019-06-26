@@ -9,7 +9,5 @@
 import Foundation
 
 struct Child: Codable {
-    var id: Int
     var name: String
-    
 }

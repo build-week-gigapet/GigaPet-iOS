@@ -41,6 +41,7 @@ class ApiController {
     private let baseUrl = URL(string: "ADDED PLACEHOLDER")
     var bearer: Bearer?
     var children: [Child] = []
+    var childDetailArray: [ChildDetail] = []
     //
     // MARK: - SignUp Function
     //
