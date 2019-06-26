@@ -78,9 +78,12 @@ class ParentPortalCollectionViewController: UICollectionViewController {
         }else if segue.identifier == "ShowChildSegue" {
             
             if let detailVC = segue.destination as? ChildViewController {
-                let indexPath = collectionView.indexPathsForSelectedItems
+                if let indexPathArray = collectionView.indexPathsForSelectedItems,
+                   let indexPath = indexPathArray.first {
+                    detailVC.child = apiController.children[indexPath.row]
+                }
                 detailVC.apiController = apiController
-                detailVC.child = apiController.children[indexPath?.first?.row]
+                
             
             }
             

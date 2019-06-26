@@ -10,14 +10,52 @@ import UIKit
 
 class AddChildViewController: UIViewController {
     
+    //
+    // MARK: - IBOutlets and Properties
+    //
+    
+    @IBOutlet weak var childNameTextField: UITextField!
+    @IBOutlet weak var favoriteFoodTextField: UITextField!
+    @IBOutlet weak var foodAlergiesTextField: UITextField!
+    
+    //
+    // MARK: - View LifeCycle
+    //
+    
     var apiController: ApiController?
+    var newChild: Child?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
     
+    //
+    // MARK: - IBActions and Methods
+    //
+    
+    @IBAction func saveButtonTapped(_ sender: UIButton) {
+        
+        if let newChildName = childNameTextField.text,
+           !newChildName.isEmpty,
+           let newChildFavoriteFood = favoriteFoodTextField.text,
+           !newChildFavoriteFood.isEmpty,
+           let newChildFoodAllergies = foodAlergiesTextField.text,
+           let apiController = apiController {
+            let newChild = Child(name: newChildName)
+            apiController.addChild(newChild: newChild) { error in
+                if let error = error {
+                    print("ERROR OCCURED ADDING NEW CHILD: \(error)")
+                }
+                DispatchQueue.main.async {
+            self.navigationController?.popViewController(animated: true)
+                }
+            }
+            let newDetailChild = ChildDetail(child: newChild, favoriteFoods: newChildFavoriteFood, foodAllergies: newChildFoodAllergies)
+            apiController.childDetailArray.append(newDetailChild)
+        }
+           
+      
+    }
 
     /*
     // MARK: - Navigation
