@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0EF-3L-hYO">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bEz-1C-v1m">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -8,6 +8,11 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="VCR_OSD_MONO_1.001.ttf">
+            <string>VCROSDMono</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Welcome to Gigapet-->
         <scene sceneID="6YG-c9-pmj">
@@ -17,55 +22,88 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="20" minimumInteritemSpacing="40" id="kKM-fi-61i">
-                            <size key="itemSize" width="200" height="200"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="84" minimumInteritemSpacing="64" id="kKM-fi-61i">
+                            <size key="itemSize" width="172" height="190"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="0.0" minY="20" maxX="0.0" maxY="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="108" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
+                        <view key="backgroundView" contentMode="scaleToFill" id="AeW-VJ-3w1">
+                            <rect key="frame" x="0.0" y="-44" width="414" height="896"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rectangle" translatesAutoresizingMaskIntoConstraints="NO" id="g6J-wu-IJm">
+                                    <rect key="frame" x="0.0" y="-31" width="414" height="201"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                </imageView>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Parent Portal" translatesAutoresizingMaskIntoConstraints="NO" id="r5O-TG-bca">
+                                    <rect key="frame" x="51" y="53" width="313" height="60"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                </imageView>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Welcome to GigaPet" translatesAutoresizingMaskIntoConstraints="NO" id="Cns-CN-YG8">
+                                    <rect key="frame" x="87" y="103" width="240" height="54"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                </imageView>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gb5-Kk-08I">
+                                    <rect key="frame" x="13" y="42" width="89" height="42"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" name="VCROSDMono" family="VCR OSD Mono" pointSize="17"/>
+                                    <state key="normal" title="Logout" backgroundImage="Purple Rectangle">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jBf-uJ-O8k">
+                                    <rect key="frame" x="308" y="760" width="84" height="84"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal" backgroundImage="Button"/>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" red="0.94901960784313721" green="0.92941176470588238" blue="0.63529411764705879" alpha="1" colorSpace="calibratedRGB"/>
+                        </view>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ChildCell" id="l4C-52-T9L" customClass="ChildCollectionViewCell" customModule="GigaPet" customModuleProvider="target">
-                                <rect key="frame" x="107" y="20" width="200" height="200"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="z2A-bT-Al4">
+                                <rect key="frame" x="0.0" y="108" width="172" height="190"/>
+                                <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                    <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="172" height="190"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NJY-ks-Q7d">
-                                            <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xk0-1t-vTX">
+                                            <rect key="frame" x="0.0" y="0.0" width="172" height="190"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SzC-7g-w9h">
-                                                    <rect key="frame" x="0.0" y="43" width="206" height="115"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ktq-xO-Kbj">
+                                                    <rect key="frame" x="0.0" y="0.0" width="172" height="190"/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Age" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bfk-Lb-r1e">
-                                                    <rect key="frame" x="8" y="166" width="30" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name Placeholder" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sYn-iT-V1X">
+                                                    <rect key="frame" x="0.0" y="139" width="172" height="51"/>
+                                                    <fontDescription key="fontDescription" name="VCROSDMono" family="VCR OSD Mono" pointSize="14"/>
+                                                    <color key="textColor" red="0.50980392156862742" green="0.16862745098039217" blue="0.85098039215686272" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="sYn-iT-V1X" secondAttribute="bottom" id="3n4-es-nzm"/>
+                                                <constraint firstItem="Ktq-xO-Kbj" firstAttribute="top" secondItem="xk0-1t-vTX" secondAttribute="top" id="7iW-zA-8cv"/>
+                                                <constraint firstItem="sYn-iT-V1X" firstAttribute="top" secondItem="xk0-1t-vTX" secondAttribute="top" constant="139" id="Euq-JS-isa"/>
+                                                <constraint firstItem="Ktq-xO-Kbj" firstAttribute="leading" secondItem="xk0-1t-vTX" secondAttribute="leading" id="IT0-R7-i2L"/>
+                                                <constraint firstItem="Ktq-xO-Kbj" firstAttribute="top" secondItem="xk0-1t-vTX" secondAttribute="top" id="JqK-ZO-K0f"/>
+                                                <constraint firstItem="Ktq-xO-Kbj" firstAttribute="leading" secondItem="xk0-1t-vTX" secondAttribute="leading" id="Jwj-NC-iIp"/>
+                                                <constraint firstItem="sYn-iT-V1X" firstAttribute="leading" secondItem="xk0-1t-vTX" secondAttribute="leading" id="RcE-rT-yOt"/>
+                                                <constraint firstAttribute="trailing" secondItem="sYn-iT-V1X" secondAttribute="trailing" id="TmA-pf-F6u"/>
+                                                <constraint firstAttribute="bottom" secondItem="Ktq-xO-Kbj" secondAttribute="bottom" id="fEf-l0-1qC"/>
+                                                <constraint firstAttribute="trailing" secondItem="Ktq-xO-Kbj" secondAttribute="trailing" id="uPV-AF-M4S"/>
+                                                <constraint firstAttribute="trailing" secondItem="Ktq-xO-Kbj" secondAttribute="trailing" id="zKf-1z-SUR"/>
+                                            </constraints>
                                         </view>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Childs Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QwL-xB-DNd">
-                                            <rect key="frame" x="10" y="10" width="180" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                     </subviews>
                                 </view>
                                 <constraints>
-                                    <constraint firstItem="NJY-ks-Q7d" firstAttribute="leading" secondItem="l4C-52-T9L" secondAttribute="leading" id="4VC-IW-OKq"/>
-                                    <constraint firstItem="NJY-ks-Q7d" firstAttribute="top" secondItem="l4C-52-T9L" secondAttribute="top" id="56L-oE-TXX"/>
-                                    <constraint firstAttribute="trailing" secondItem="NJY-ks-Q7d" secondAttribute="trailing" id="aYu-fk-n8c"/>
-                                    <constraint firstAttribute="bottom" secondItem="NJY-ks-Q7d" secondAttribute="bottom" id="fn8-Lo-qmB"/>
+                                    <constraint firstItem="xk0-1t-vTX" firstAttribute="leading" secondItem="z2A-bT-Al4" secondAttribute="leading" id="3Nv-6b-rpK"/>
+                                    <constraint firstItem="xk0-1t-vTX" firstAttribute="top" secondItem="z2A-bT-Al4" secondAttribute="top" id="JeL-1Q-HJ7"/>
+                                    <constraint firstAttribute="bottom" secondItem="xk0-1t-vTX" secondAttribute="bottom" id="STE-7Y-bh7"/>
+                                    <constraint firstAttribute="trailing" secondItem="xk0-1t-vTX" secondAttribute="trailing" id="kZG-Yl-CCJ"/>
                                 </constraints>
-                                <connections>
-                                    <segue destination="2zS-PH-68j" kind="show" identifier="ShowChildSegue" id="zmb-8X-pvY"/>
-                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>
@@ -113,23 +151,12 @@
             </objects>
             <point key="canvasLocation" x="1781" y="229"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="NGK-Oz-EdO">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0EF-3L-hYO" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="WA6-6u-hic">
-                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="bEz-1C-v1m" kind="relationship" relationship="rootViewController" id="uXZ-s9-Vd0"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="y8x-48-hIX" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="179.71014492753625" y="209.59821428571428"/>
-        </scene>
     </scenes>
+    <resources>
+        <image name="Button" width="66.666664123535156" height="66.666664123535156"/>
+        <image name="Parent Portal" width="386" height="200"/>
+        <image name="Purple Rectangle" width="424" height="200"/>
+        <image name="Rectangle" width="499" height="200"/>
+        <image name="Welcome to GigaPet" width="2133" height="200"/>
+    </resources>
 </document>
