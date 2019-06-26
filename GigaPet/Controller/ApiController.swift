@@ -181,8 +181,7 @@ class ApiController {
     // MARK: - Add Child
     //
     
-    func addChild (newChild: Child, completion: @escaping(Error?
-        ) -> Void) {
+    func addChild (newChild: Child, completion: @escaping(Error?) -> Void) {
         
         guard let bearer = bearer else {
             print("Error getting token")
@@ -230,5 +229,10 @@ class ApiController {
                 completion(error)
             }
         }
+    }
+    
+    func addFoodItem (foodItem: FoodEntry, completion: @escaping(Error?) -> Void) {
+        
+        
     }
 }

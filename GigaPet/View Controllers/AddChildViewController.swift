@@ -1,37 +1,23 @@
 //
-//  ChildViewController.swift
+//  AddChildViewController.swift
 //  GigaPet
 //
-//  Created by Jake Connerly on 6/24/19.
+//  Created by Jake Connerly on 6/25/19.
 //  Copyright © 2019 jake connerly. All rights reserved.
 //
 
 import UIKit
 
-class ChildViewController: UIViewController {
-    
-    //
-    // MARK: - IBOutlets and Properties
-    //
-    
-    
+class AddChildViewController: UIViewController {
     
     var apiController: ApiController?
-    var child: Child? {
-        didSet {
-            
-        }
-    }
-    var foodEatenToday: [FoodEntry] = []
-    var foodEatenWeek: [FoodEntry] = []
-    var foodEatenMonth: [FoodEntry] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
-
+    
 
     /*
     // MARK: - Navigation

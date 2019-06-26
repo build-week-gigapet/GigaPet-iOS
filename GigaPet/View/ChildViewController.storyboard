@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Child View Controller-->
+        <!--Child Name-->
         <scene sceneID="Tmg-kc-PR2">
             <objects>
                 <viewController storyboardIdentifier="ChildViewController" id="bSZ-Dt-Wx9" customClass="ChildViewController" customModule="GigaPet" customModuleProvider="target" sceneMemberID="viewController">
@@ -20,10 +20,37 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="dGb-J3-tu8"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Child Name" id="sB7-55-PBT">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="NZP-vZ-tFi">
+                            <connections>
+                                <segue destination="Sdq-uK-iga" kind="unwind" unwindAction="unwindToParent:" id="LUq-62-liI"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Add Food Item" id="qJT-ZB-EHj"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DfD-FK-bXP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Sdq-uK-iga" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-391" y="58"/>
+            <point key="canvasLocation" x="518.84057971014499" y="57.589285714285708"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="UnD-GZ-SKg">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yoT-d7-o5A" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="3Tr-wJ-NY3">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="bSZ-Dt-Wx9" kind="relationship" relationship="rootViewController" id="6ou-O6-UqB"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CiV-m8-2fp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-391.304347826087" y="57.589285714285708"/>
         </scene>
     </scenes>
 </document>
