@@ -132,6 +132,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="DIL-DP-ThY"/>
                     </view>
+                    <connections>
+                        <outlet property="loginTypeSegmentedControl" destination="mfR-2z-Sm3" id="xHc-AI-Z5w"/>
+                        <outlet property="passwordTextField" destination="ZY9-UX-hdx" id="ztO-iQ-Tpf"/>
+                        <outlet property="signInButton" destination="R4G-Tj-RbC" id="Sz8-SU-Rp1"/>
+                        <outlet property="usernameTextField" destination="0VC-F2-cN7" id="xjY-9b-FEt"/>
+                    </connections>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="18.840579710144929" y="85.714285714285708"/>

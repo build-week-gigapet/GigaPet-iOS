@@ -22,6 +22,9 @@
 		32BFB25922C2E7B400A45D0D /* ParentPortalCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32BFB25822C2E7B400A45D0D /* ParentPortalCollectionViewController.swift */; };
 		32BFB25B22C2E85C00A45D0D /* ChildViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32BFB25A22C2E85C00A45D0D /* ChildViewController.storyboard */; };
 		32BFB25F22C2E94600A45D0D /* LoginViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32BFB25E22C2E94600A45D0D /* LoginViewController.storyboard */; };
+		32BFB26322C3277700A45D0D /* AddChildViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32BFB26222C3277700A45D0D /* AddChildViewController.storyboard */; };
+		32BFB26522C3279900A45D0D /* AddChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32BFB26422C3279900A45D0D /* AddChildViewController.swift */; };
+		32BFB26722C32E3A00A45D0D /* ChildCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32BFB26622C32E3A00A45D0D /* ChildCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +47,9 @@
 		32BFB25822C2E7B400A45D0D /* ParentPortalCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentPortalCollectionViewController.swift; sourceTree = "<group>"; };
 		32BFB25A22C2E85C00A45D0D /* ChildViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChildViewController.storyboard; sourceTree = "<group>"; };
 		32BFB25E22C2E94600A45D0D /* LoginViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginViewController.storyboard; sourceTree = "<group>"; };
+		32BFB26222C3277700A45D0D /* AddChildViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddChildViewController.storyboard; sourceTree = "<group>"; };
+		32BFB26422C3279900A45D0D /* AddChildViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddChildViewController.swift; sourceTree = "<group>"; };
+		32BFB26622C32E3A00A45D0D /* ChildCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,9 +119,11 @@
 		32087A2C22C2B1CF002BF9F0 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				32087A1F22C2B1AC002BF9F0 /* ChildViewController.swift */,
+				32BFB26622C32E3A00A45D0D /* ChildCollectionViewCell.swift */,
 				32087A2122C2B1AC002BF9F0 /* LoginViewController.swift */,
 				32BFB25822C2E7B400A45D0D /* ParentPortalCollectionViewController.swift */,
+				32087A1F22C2B1AC002BF9F0 /* ChildViewController.swift */,
+				32BFB26422C3279900A45D0D /* AddChildViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -134,6 +142,7 @@
 				32BFB25E22C2E94600A45D0D /* LoginViewController.storyboard */,
 				32BFB25622C2E72D00A45D0D /* ParentPortalViewController.storyboard */,
 				32BFB25A22C2E85C00A45D0D /* ChildViewController.storyboard */,
+				32BFB26222C3277700A45D0D /* AddChildViewController.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -198,6 +207,7 @@
 			files = (
 				32087A0F22C2AF8D002BF9F0 /* LaunchScreen.storyboard in Resources */,
 				32087A0C22C2AF8D002BF9F0 /* Assets.xcassets in Resources */,
+				32BFB26322C3277700A45D0D /* AddChildViewController.storyboard in Resources */,
 				32BFB25F22C2E94600A45D0D /* LoginViewController.storyboard in Resources */,
 				32BFB25722C2E72D00A45D0D /* ParentPortalViewController.storyboard in Resources */,
 				32BFB25B22C2E85C00A45D0D /* ChildViewController.storyboard in Resources */,
@@ -217,10 +227,12 @@
 				32BFB25922C2E7B400A45D0D /* ParentPortalCollectionViewController.swift in Sources */,
 				32087A2722C2B1AC002BF9F0 /* Bearer.swift in Sources */,
 				32087A2422C2B1AC002BF9F0 /* FoodEntryModel.swift in Sources */,
+				32BFB26522C3279900A45D0D /* AddChildViewController.swift in Sources */,
 				32087A2522C2B1AC002BF9F0 /* User.swift in Sources */,
 				32087A0522C2AF8C002BF9F0 /* AppDelegate.swift in Sources */,
 				32087A2A22C2B1AC002BF9F0 /* LoginViewController.swift in Sources */,
 				32087A2822C2B1AC002BF9F0 /* ChildViewController.swift in Sources */,
+				32BFB26722C32E3A00A45D0D /* ChildCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

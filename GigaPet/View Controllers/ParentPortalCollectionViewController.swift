@@ -8,13 +8,25 @@
 
 import UIKit
 
-private let reuseIdentifier = "Cell"
+private let reuseIdentifier = "ChildCell"
 let apiController = ApiController()
 
 class ParentPortalCollectionViewController: UICollectionViewController {
+    
+    //
+    // MARK: - IBOutlets and Properties
+    //
+    
+    @IBOutlet weak var childName: UILabel!
+    @IBOutlet weak var childImage: UIImageView!
 
+    //
+    // MARK: - View LifeCycle
+    //
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        collectionView.delegate = self
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -24,41 +36,60 @@ class ParentPortalCollectionViewController: UICollectionViewController {
             performSegue(withIdentifier: "LoginViewModalSegue", sender: self)
         }
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
-    }
-    */
     
     //
     // MARK: UICollectionViewDataSource
     //
-    
-    override func numberOfSections(in collectionView: UICollectionView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
-
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of items
-        return 0
+        return apiController.children.count
     }
-
+    var indexpath: Int = 0
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
-    
-        // Configure the cell
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as? ChildCollectionViewCell else { return UICollectionViewCell() }
     
         return cell
     }
     
+    //
+    // MARK: - IBActions and Methods
+    //
+    
+    @IBAction func addChildButtonPressed (_ sender: UIButton) {
+    
+    }
+    
+    @IBAction func logoutButtonPressed (_ sender: UIButton) {
+        
+    }
     
     
+    //
+    // MARK: - Navigation
+    //
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "AddChildSegue" {
+            if let addChildVC = segue.destination as? AddChildViewController {
+                addChildVC.apiController = apiController
+            }
+        }else if segue.identifier == "ShowChildSegue" {
+            
+            if let detailVC = segue.destination as? ChildViewController {
+                let indexPath = collectionView.indexPathsForSelectedItems
+                detailVC.apiController = apiController
+                detailVC.child = apiController.children[indexPath?.first?.row]
+            
+            }
+            
+        }
+    }
+
+    @IBAction func unwindToParent(_ sender: UIStoryboardSegue) {
+        
+    }
 
     // MARK: UICollectionViewDelegate
 
