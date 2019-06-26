@@ -18,7 +18,6 @@
         <!--Login View Controller-->
         <scene sceneID="5eI-Oq-ZIr">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Xyy-cU-t9N" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="LoginViewController" id="bwE-hf-Z8z" customClass="LoginViewController" customModule="GigaPet" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="reD-yh-mu1">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -61,6 +60,9 @@
                                     <segment title="Sign in"/>
                                 </segments>
                                 <color key="tintColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="signInTypeChanged:" destination="bwE-hf-Z8z" eventType="valueChanged" id="b9J-h8-AGJ"/>
+                                </connections>
                             </segmentedControl>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="USERNAME" translatesAutoresizingMaskIntoConstraints="NO" id="AFS-oZ-lu9">
                                 <rect key="frame" x="143" y="394" width="127" height="52"/>
@@ -94,6 +96,9 @@
                                 <state key="normal" title="Register" backgroundImage="Rectangle2">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="loginButtonTapped:" destination="bwE-hf-Z8z" eventType="touchUpInside" id="m4k-Zj-r6y"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="kitchentable_tafu1e 2" translatesAutoresizingMaskIntoConstraints="NO" id="oqt-wJ-UBF">
                                 <rect key="frame" x="-17" y="783" width="270" height="151"/>
@@ -139,6 +144,7 @@
                         <outlet property="usernameTextField" destination="0VC-F2-cN7" id="xjY-9b-FEt"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xyy-cU-t9N" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="18.840579710144929" y="85.714285714285708"/>
         </scene>

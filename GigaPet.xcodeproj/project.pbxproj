@@ -11,7 +11,7 @@
 		32087A0C22C2AF8D002BF9F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32087A0B22C2AF8D002BF9F0 /* Assets.xcassets */; };
 		32087A0F22C2AF8D002BF9F0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32087A0D22C2AF8D002BF9F0 /* LaunchScreen.storyboard */; };
 		32087A2422C2B1AC002BF9F0 /* FoodEntryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32087A1B22C2B1AB002BF9F0 /* FoodEntryModel.swift */; };
-		32087A2522C2B1AC002BF9F0 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32087A1C22C2B1AB002BF9F0 /* User.swift */; };
+		32087A2522C2B1AC002BF9F0 /* UserParent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32087A1C22C2B1AB002BF9F0 /* UserParent.swift */; };
 		32087A2622C2B1AC002BF9F0 /* ChildApiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32087A1D22C2B1AB002BF9F0 /* ChildApiModel.swift */; };
 		32087A2722C2B1AC002BF9F0 /* Bearer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32087A1E22C2B1AB002BF9F0 /* Bearer.swift */; };
 		32087A2822C2B1AC002BF9F0 /* ChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32087A1F22C2B1AC002BF9F0 /* ChildViewController.swift */; };
@@ -37,7 +37,7 @@
 		32087A1622C2B14D002BF9F0 /* VCR_OSD_MONO_1.001.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = VCR_OSD_MONO_1.001.ttf; sourceTree = "<group>"; };
 		32087A1722C2B161002BF9F0 /* FlappyBirdy.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FlappyBirdy.ttf; sourceTree = "<group>"; };
 		32087A1B22C2B1AB002BF9F0 /* FoodEntryModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodEntryModel.swift; sourceTree = "<group>"; };
-		32087A1C22C2B1AB002BF9F0 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		32087A1C22C2B1AB002BF9F0 /* UserParent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserParent.swift; sourceTree = "<group>"; };
 		32087A1D22C2B1AB002BF9F0 /* ChildApiModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChildApiModel.swift; sourceTree = "<group>"; };
 		32087A1E22C2B1AB002BF9F0 /* Bearer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bearer.swift; sourceTree = "<group>"; };
 		32087A1F22C2B1AC002BF9F0 /* ChildViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChildViewController.swift; sourceTree = "<group>"; };
@@ -111,10 +111,10 @@
 			children = (
 				32087A1E22C2B1AB002BF9F0 /* Bearer.swift */,
 				32087A1D22C2B1AB002BF9F0 /* ChildApiModel.swift */,
+				32BFB26822C3DBE000A45D0D /* ChildDetailModel.swift */,
 				32087A1B22C2B1AB002BF9F0 /* FoodEntryModel.swift */,
 				32087A2022C2B1AC002BF9F0 /* ParentModel.swift */,
-				32087A1C22C2B1AB002BF9F0 /* User.swift */,
-				32BFB26822C3DBE000A45D0D /* ChildDetailModel.swift */,
+				32087A1C22C2B1AB002BF9F0 /* UserParent.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -231,7 +231,7 @@
 				32087A2722C2B1AC002BF9F0 /* Bearer.swift in Sources */,
 				32087A2422C2B1AC002BF9F0 /* FoodEntryModel.swift in Sources */,
 				32BFB26522C3279900A45D0D /* AddChildViewController.swift in Sources */,
-				32087A2522C2B1AC002BF9F0 /* User.swift in Sources */,
+				32087A2522C2B1AC002BF9F0 /* UserParent.swift in Sources */,
 				32BFB26922C3DBE000A45D0D /* ChildDetailModel.swift in Sources */,
 				32087A0522C2AF8C002BF9F0 /* AppDelegate.swift in Sources */,
 				32087A2A22C2B1AC002BF9F0 /* LoginViewController.swift in Sources */,

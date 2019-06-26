@@ -47,11 +47,12 @@ class AddChildViewController: UIViewController {
                     print("ERROR OCCURED ADDING NEW CHILD: \(error)")
                 }
                 DispatchQueue.main.async {
-            self.navigationController?.popViewController(animated: true)
+                    self.navigationController?.popViewController(animated: true)
+                    let newDetailChild = ChildDetail(child: newChild, favoriteFoods: newChildFavoriteFood, foodAllergies: newChildFoodAllergies, foodsEaten: nil)
+                    apiController.childDetailArray.append(newDetailChild)
                 }
             }
-            let newDetailChild = ChildDetail(child: newChild, favoriteFoods: newChildFavoriteFood, foodAllergies: newChildFoodAllergies)
-            apiController.childDetailArray.append(newDetailChild)
+            
         }
            
       
