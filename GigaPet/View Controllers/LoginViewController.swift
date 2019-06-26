@@ -29,8 +29,6 @@ class LoginViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        self.present(self, animated: true, completion: nil)
     }
     
     //
@@ -67,9 +65,7 @@ class LoginViewController: UIViewController {
                         print("ERROR DURING SIGN IN: \(error)")
                     }else {
                         DispatchQueue.main.async {
-                            let viewController = ParentPortalViewController()
                             self.dismiss(animated: true, completion: nil)
-                            self.present(viewController, animated: true, completion: nil)
                         }
                     }
                 }

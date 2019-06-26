@@ -10,7 +10,6 @@
 		32087A0522C2AF8C002BF9F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32087A0422C2AF8C002BF9F0 /* AppDelegate.swift */; };
 		32087A0C22C2AF8D002BF9F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32087A0B22C2AF8D002BF9F0 /* Assets.xcassets */; };
 		32087A0F22C2AF8D002BF9F0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32087A0D22C2AF8D002BF9F0 /* LaunchScreen.storyboard */; };
-		32087A2222C2B1AC002BF9F0 /* ParentPortalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32087A1922C2B1AB002BF9F0 /* ParentPortalViewController.swift */; };
 		32087A2422C2B1AC002BF9F0 /* FoodEntryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32087A1B22C2B1AB002BF9F0 /* FoodEntryModel.swift */; };
 		32087A2522C2B1AC002BF9F0 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32087A1C22C2B1AB002BF9F0 /* User.swift */; };
 		32087A2622C2B1AC002BF9F0 /* ChildModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32087A1D22C2B1AB002BF9F0 /* ChildModel.swift */; };
@@ -18,9 +17,6 @@
 		32087A2822C2B1AC002BF9F0 /* ChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32087A1F22C2B1AC002BF9F0 /* ChildViewController.swift */; };
 		32087A2922C2B1AC002BF9F0 /* ParentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32087A2022C2B1AC002BF9F0 /* ParentModel.swift */; };
 		32087A2A22C2B1AC002BF9F0 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32087A2122C2B1AC002BF9F0 /* LoginViewController.swift */; };
-		32087A2F22C2B1F4002BF9F0 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32087A2E22C2B1F4002BF9F0 /* LoginViewController.xib */; };
-		32087A3122C2B205002BF9F0 /* ChildViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32087A3022C2B205002BF9F0 /* ChildViewController.xib */; };
-		32087A3322C2B216002BF9F0 /* ParentPortalViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32087A3222C2B216002BF9F0 /* ParentPortalViewController.xib */; };
 		32BFB25522C2D8D900A45D0D /* ApiController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32BFB25422C2D8D900A45D0D /* ApiController.swift */; };
 		32BFB25722C2E72D00A45D0D /* ParentPortalViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32BFB25622C2E72D00A45D0D /* ParentPortalViewController.storyboard */; };
 		32BFB25922C2E7B400A45D0D /* ParentPortalCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32BFB25822C2E7B400A45D0D /* ParentPortalCollectionViewController.swift */; };
@@ -36,7 +32,6 @@
 		32087A1022C2AF8D002BF9F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		32087A1622C2B14D002BF9F0 /* VCR_OSD_MONO_1.001.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = VCR_OSD_MONO_1.001.ttf; sourceTree = "<group>"; };
 		32087A1722C2B161002BF9F0 /* FlappyBirdy.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FlappyBirdy.ttf; sourceTree = "<group>"; };
-		32087A1922C2B1AB002BF9F0 /* ParentPortalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParentPortalViewController.swift; sourceTree = "<group>"; };
 		32087A1B22C2B1AB002BF9F0 /* FoodEntryModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodEntryModel.swift; sourceTree = "<group>"; };
 		32087A1C22C2B1AB002BF9F0 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		32087A1D22C2B1AB002BF9F0 /* ChildModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChildModel.swift; sourceTree = "<group>"; };
@@ -44,9 +39,6 @@
 		32087A1F22C2B1AC002BF9F0 /* ChildViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChildViewController.swift; sourceTree = "<group>"; };
 		32087A2022C2B1AC002BF9F0 /* ParentModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParentModel.swift; sourceTree = "<group>"; };
 		32087A2122C2B1AC002BF9F0 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		32087A2E22C2B1F4002BF9F0 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
-		32087A3022C2B205002BF9F0 /* ChildViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChildViewController.xib; sourceTree = "<group>"; };
-		32087A3222C2B216002BF9F0 /* ParentPortalViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ParentPortalViewController.xib; sourceTree = "<group>"; };
 		32BFB25422C2D8D900A45D0D /* ApiController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiController.swift; sourceTree = "<group>"; };
 		32BFB25622C2E72D00A45D0D /* ParentPortalViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ParentPortalViewController.storyboard; sourceTree = "<group>"; };
 		32BFB25822C2E7B400A45D0D /* ParentPortalCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentPortalCollectionViewController.swift; sourceTree = "<group>"; };
@@ -123,7 +115,6 @@
 			children = (
 				32087A1F22C2B1AC002BF9F0 /* ChildViewController.swift */,
 				32087A2122C2B1AC002BF9F0 /* LoginViewController.swift */,
-				32087A1922C2B1AB002BF9F0 /* ParentPortalViewController.swift */,
 				32BFB25822C2E7B400A45D0D /* ParentPortalCollectionViewController.swift */,
 			);
 			path = "View Controllers";
@@ -140,11 +131,8 @@
 		32087A3422C2B21C002BF9F0 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				32087A2E22C2B1F4002BF9F0 /* LoginViewController.xib */,
 				32BFB25E22C2E94600A45D0D /* LoginViewController.storyboard */,
-				32087A3222C2B216002BF9F0 /* ParentPortalViewController.xib */,
 				32BFB25622C2E72D00A45D0D /* ParentPortalViewController.storyboard */,
-				32087A3022C2B205002BF9F0 /* ChildViewController.xib */,
 				32BFB25A22C2E85C00A45D0D /* ChildViewController.storyboard */,
 			);
 			path = View;
@@ -208,11 +196,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				32087A3322C2B216002BF9F0 /* ParentPortalViewController.xib in Resources */,
 				32087A0F22C2AF8D002BF9F0 /* LaunchScreen.storyboard in Resources */,
 				32087A0C22C2AF8D002BF9F0 /* Assets.xcassets in Resources */,
-				32087A2F22C2B1F4002BF9F0 /* LoginViewController.xib in Resources */,
-				32087A3122C2B205002BF9F0 /* ChildViewController.xib in Resources */,
 				32BFB25F22C2E94600A45D0D /* LoginViewController.storyboard in Resources */,
 				32BFB25722C2E72D00A45D0D /* ParentPortalViewController.storyboard in Resources */,
 				32BFB25B22C2E85C00A45D0D /* ChildViewController.storyboard in Resources */,
@@ -229,7 +214,6 @@
 				32087A2622C2B1AC002BF9F0 /* ChildModel.swift in Sources */,
 				32087A2922C2B1AC002BF9F0 /* ParentModel.swift in Sources */,
 				32BFB25522C2D8D900A45D0D /* ApiController.swift in Sources */,
-				32087A2222C2B1AC002BF9F0 /* ParentPortalViewController.swift in Sources */,
 				32BFB25922C2E7B400A45D0D /* ParentPortalCollectionViewController.swift in Sources */,
 				32087A2722C2B1AC002BF9F0 /* Bearer.swift in Sources */,
 				32087A2422C2B1AC002BF9F0 /* FoodEntryModel.swift in Sources */,
