@@ -23,7 +23,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Rectangle" translatesAutoresizingMaskIntoConstraints="NO" id="V34-LT-N83">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Rectangle yellow" translatesAutoresizingMaskIntoConstraints="NO" id="V34-LT-N83">
                                 <rect key="frame" x="-51" y="534" width="517" height="362"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -154,7 +154,7 @@
         <image name="GigaPet" width="109.33333587646484" height="41.666667938232422"/>
         <image name="PASSWORD" width="443" height="66.666664123535156"/>
         <image name="PinClipart.com_easy-clip-art_709669" width="33" height="66.666664123535156"/>
-        <image name="Rectangle" width="499" height="200"/>
+        <image name="Rectangle yellow" width="138" height="120.66666412353516"/>
         <image name="Rectangle2" width="61.333332061767578" height="17.666666030883789"/>
         <image name="USERNAME" width="413.33334350585938" height="66.666664123535156"/>
         <image name="kitchentable_tafu1e 2" width="223.33332824707031" height="66.666664123535156"/>
