@@ -231,7 +231,7 @@ class ApiController {
         }
     }
     
-    func addFoodItem (foodItem: FoodEntry, completion: @escaping(Error?) -> Void) {
+    func addFoodItem (foodItem: FoodEntry, for: Child, completion: @escaping(Error?) -> Void) {
         
         guard let bearer = bearer else {
             print("Error getting token")
@@ -280,7 +280,8 @@ class ApiController {
                     let children = parent.children,
                     let childIndex = self.childIndex else { return }
                 var selectedChild = children[childIndex]
-                selectedChild.foodEntries.append(newFoodItem)
+                selectedChild.foodEntries!.append(newFoodItem)
+                
             }catch {
                 completion(error)
             }

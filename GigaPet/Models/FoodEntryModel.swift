@@ -11,5 +11,5 @@ import Foundation
 struct FoodEntry: Codable {
     var name: String
     var category: Int
-    var date_added: Data
+    var date_added: Date
 }

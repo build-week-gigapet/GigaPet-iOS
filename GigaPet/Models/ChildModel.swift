@@ -14,10 +14,10 @@ struct Child: Codable {
     var foodAllergies: String
     var foodEntries: [FoodEntry]?
     
-    init(name: String, favoriteFoods: String, foodAllergies: String, foodsEaten: FoodEntry?) {
+    init(name: String, favoriteFoods: String, foodAllergies: String) {
         self.name = name
         self.favoriteFoods = favoriteFoods
         self.foodAllergies = foodAllergies
-    
+        self.foodEntries = []
     }
 }

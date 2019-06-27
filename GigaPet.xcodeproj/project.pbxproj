@@ -18,6 +18,7 @@
 		321279DB22C4ACC800D42978 /* ParentPortalViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 321279DA22C4ACC800D42978 /* ParentPortalViewController.storyboard */; };
 		321279DD22C4AD5500D42978 /* ChildViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 321279DC22C4AD5500D42978 /* ChildViewController.storyboard */; };
 		321279DF22C4AD8400D42978 /* AddFoodViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 321279DE22C4AD8400D42978 /* AddFoodViewController.storyboard */; };
+		321279E122C4B19900D42978 /* AddFoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321279E022C4B19800D42978 /* AddFoodViewController.swift */; };
 		32BFB25522C2D8D900A45D0D /* ApiController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32BFB25422C2D8D900A45D0D /* ApiController.swift */; };
 		32BFB25922C2E7B400A45D0D /* ParentPortalCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32BFB25822C2E7B400A45D0D /* ParentPortalCollectionViewController.swift */; };
 		32BFB25F22C2E94600A45D0D /* LoginViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32BFB25E22C2E94600A45D0D /* LoginViewController.storyboard */; };
@@ -43,6 +44,7 @@
 		321279DA22C4ACC800D42978 /* ParentPortalViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = ParentPortalViewController.storyboard; path = "../../../../../GigaPet Wire Frame/ParentPortalViewController.storyboard"; sourceTree = "<group>"; };
 		321279DC22C4AD5500D42978 /* ChildViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = ChildViewController.storyboard; path = "../../../../../GigaPet Wire Frame/ChildViewController.storyboard"; sourceTree = "<group>"; };
 		321279DE22C4AD8400D42978 /* AddFoodViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AddFoodViewController.storyboard; sourceTree = "<group>"; };
+		321279E022C4B19800D42978 /* AddFoodViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddFoodViewController.swift; sourceTree = "<group>"; };
 		32BFB25422C2D8D900A45D0D /* ApiController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiController.swift; sourceTree = "<group>"; };
 		32BFB25822C2E7B400A45D0D /* ParentPortalCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentPortalCollectionViewController.swift; sourceTree = "<group>"; };
 		32BFB25E22C2E94600A45D0D /* LoginViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginViewController.storyboard; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 				32BFB25822C2E7B400A45D0D /* ParentPortalCollectionViewController.swift */,
 				32087A1F22C2B1AC002BF9F0 /* ChildViewController.swift */,
 				32BFB26422C3279900A45D0D /* AddChildViewController.swift */,
+				321279E022C4B19800D42978 /* AddFoodViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -232,6 +235,7 @@
 				32087A0522C2AF8C002BF9F0 /* AppDelegate.swift in Sources */,
 				32087A2A22C2B1AC002BF9F0 /* LoginViewController.swift in Sources */,
 				32087A2822C2B1AC002BF9F0 /* ChildViewController.swift in Sources */,
+				321279E122C4B19900D42978 /* AddFoodViewController.swift in Sources */,
 				32BFB26722C32E3A00A45D0D /* ChildCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
