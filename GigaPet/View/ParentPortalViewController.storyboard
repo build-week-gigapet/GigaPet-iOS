@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bEz-1C-v1m">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="VCR_OSD_MONO_1.001.ttf">
+            <string>VCROSDMono</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Welcome to Gigapet-->
+        <scene sceneID="6YG-c9-pmj">
+            <objects>
+                <collectionViewController id="bEz-1C-v1m" customClass="ParentPortalCollectionViewController" customModule="GigaPet" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="gwU-xU-zTc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="84" minimumInteritemSpacing="64" id="kKM-fi-61i">
+                            <size key="itemSize" width="172" height="190"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="108" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <view key="backgroundView" contentMode="scaleToFill" id="AeW-VJ-3w1">
+                            <rect key="frame" x="0.0" y="-44" width="414" height="896"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rectangle" translatesAutoresizingMaskIntoConstraints="NO" id="g6J-wu-IJm">
+                                    <rect key="frame" x="0.0" y="-31" width="414" height="201"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                </imageView>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Parent Portal" translatesAutoresizingMaskIntoConstraints="NO" id="r5O-TG-bca">
+                                    <rect key="frame" x="51" y="53" width="313" height="60"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                </imageView>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Welcome to GigaPet" translatesAutoresizingMaskIntoConstraints="NO" id="Cns-CN-YG8">
+                                    <rect key="frame" x="87" y="103" width="240" height="54"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                </imageView>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gb5-Kk-08I">
+                                    <rect key="frame" x="13" y="42" width="89" height="42"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" name="VCROSDMono" family="VCR OSD Mono" pointSize="17"/>
+                                    <state key="normal" title="Logout" backgroundImage="Purple Rectangle">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jBf-uJ-O8k">
+                                    <rect key="frame" x="308" y="760" width="84" height="84"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal" backgroundImage="Button"/>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" red="0.94901960784313721" green="0.92941176470588238" blue="0.63529411764705879" alpha="1" colorSpace="calibratedRGB"/>
+                        </view>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="z2A-bT-Al4">
+                                <rect key="frame" x="0.0" y="108" width="172" height="190"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                    <rect key="frame" x="0.0" y="0.0" width="172" height="190"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xk0-1t-vTX">
+                                            <rect key="frame" x="0.0" y="0.0" width="172" height="190"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ktq-xO-Kbj">
+                                                    <rect key="frame" x="0.0" y="0.0" width="172" height="140"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name Placeholder" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sYn-iT-V1X">
+                                                    <rect key="frame" x="0.0" y="139" width="172" height="51"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="VCROSDMono" family="VCR OSD Mono" pointSize="14"/>
+                                                    <color key="textColor" red="0.50980392156862742" green="0.16862745098039217" blue="0.85098039215686272" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstItem="Ktq-xO-Kbj" firstAttribute="top" secondItem="xk0-1t-vTX" secondAttribute="top" id="7iW-zA-8cv"/>
+                                                <constraint firstItem="Ktq-xO-Kbj" firstAttribute="leading" secondItem="xk0-1t-vTX" secondAttribute="leading" id="IT0-R7-i2L"/>
+                                                <constraint firstItem="Ktq-xO-Kbj" firstAttribute="top" secondItem="xk0-1t-vTX" secondAttribute="top" id="JqK-ZO-K0f"/>
+                                                <constraint firstItem="Ktq-xO-Kbj" firstAttribute="leading" secondItem="xk0-1t-vTX" secondAttribute="leading" id="Jwj-NC-iIp"/>
+                                                <constraint firstAttribute="bottom" secondItem="Ktq-xO-Kbj" secondAttribute="bottom" id="fEf-l0-1qC"/>
+                                                <constraint firstAttribute="trailing" secondItem="Ktq-xO-Kbj" secondAttribute="trailing" id="uPV-AF-M4S"/>
+                                                <constraint firstAttribute="trailing" secondItem="Ktq-xO-Kbj" secondAttribute="trailing" id="zKf-1z-SUR"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                </view>
+                                <constraints>
+                                    <constraint firstItem="xk0-1t-vTX" firstAttribute="leading" secondItem="z2A-bT-Al4" secondAttribute="leading" id="3Nv-6b-rpK"/>
+                                    <constraint firstItem="xk0-1t-vTX" firstAttribute="top" secondItem="z2A-bT-Al4" secondAttribute="top" id="JeL-1Q-HJ7"/>
+                                    <constraint firstAttribute="bottom" secondItem="xk0-1t-vTX" secondAttribute="bottom" id="STE-7Y-bh7"/>
+                                    <constraint firstAttribute="trailing" secondItem="xk0-1t-vTX" secondAttribute="trailing" id="kZG-Yl-CCJ"/>
+                                </constraints>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="bEz-1C-v1m" id="ojH-ek-KQM"/>
+                            <outlet property="delegate" destination="bEz-1C-v1m" id="TZ7-B7-iMt"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" title="Welcome to Gigapet" id="1t4-Yf-WUE">
+                        <barButtonItem key="leftBarButtonItem" title="Logout" id="bzT-fi-hVV"/>
+                        <barButtonItem key="rightBarButtonItem" title="Add Child" id="Qjp-Us-jWD">
+                            <connections>
+                                <segue destination="e8B-vc-bm3" kind="show" identifier="AddChildSegue" id="sr6-hO-0mO"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="0Ys-Sf-Yuu" kind="presentation" identifier="LoginViewModalSegue" id="0yc-Np-vNV"/>
+                    </connections>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sDA-aE-C9Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="995.65217391304361" y="209.59821428571428"/>
+        </scene>
+        <!--LoginViewController-->
+        <scene sceneID="eLY-iu-nln">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="LoginViewController" storyboardName="LoginViewController" referencedIdentifier="LoginViewController" id="0Ys-Sf-Yuu" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="smY-zY-sG5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="996" y="631"/>
+        </scene>
+        <!--ChildViewController-->
+        <scene sceneID="HTy-o5-3cf">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="ChildViewController" storyboardName="ChildViewController" referencedIdentifier="ChildViewController" id="2zS-PH-68j" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="33m-hR-r2C" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1762" y="195"/>
+        </scene>
+        <!--AddChildViewController-->
+        <scene sceneID="UQd-Jz-bSJ">
+            <objects>
+                <viewControllerPlaceholder storyboardName="AddChildViewController" referencedIdentifier="AddChildViewController" id="e8B-vc-bm3" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bb7-8J-dUV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1781" y="229"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Button" width="66.666664123535156" height="66.666664123535156"/>
+        <image name="Parent Portal" width="386" height="200"/>
+        <image name="Purple Rectangle" width="424" height="200"/>
+        <image name="Rectangle" width="499" height="200"/>
+        <image name="Welcome to GigaPet" width="2133" height="200"/>
+    </resources>
+</document>
