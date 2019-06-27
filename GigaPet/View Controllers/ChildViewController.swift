@@ -19,10 +19,19 @@ class ChildViewController: UIViewController {
     @IBOutlet weak var dateSegmentedControl: UISegmentedControl!
     @IBOutlet weak var foodItemTableView: UITableView!
     
+    var proteinCount = 0
+    var dairyCount = 0
+    var grainsCount = 0
+    var vegetableCount = 0
+    var fruitCount = 0
+    var sweetsCount = 0
+    
+    var childIndex: Int?
+
     var apiController: ApiController?
     var child: Child? {
         didSet {
-
+            updateViews()
         }
     }
     var foodEatenToday: [FoodEntry] = []
@@ -30,12 +39,52 @@ class ChildViewController: UIViewController {
     var foodEatenMonth: [FoodEntry] = []
     let sections: [String] = ["Protein", "Dairy", "Grains", "Vegetables", "Fruit", "Sweets"]
 
+    //
+    // MARK: - View Lifycycle
+    //
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.foodItemTableView.delegate = self
         self.foodItemTableView.dataSource = self
     }
+    
+    //
+    // MARK: - IBActions and Methods
+    //
+    
+    func updateViews() {
+        
+        guard let child = child else { return }
+        
+        favoriteFoodLabel.text = child.favoriteFoods
+        foodAllergyLabel.text = child.foodAllergies
+        
+    }
+    
+    @IBAction func unwindToChild(_ sender: UIStoryboardSegue) {
+    }
+    
+    //
+    // MARK: - Navigation
+    //
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let addFoodVC = segue.destination as? AddFoodViewController {
+            addFoodVC.child = child
+            addFoodVC.apiController = apiController
+            guard let apiController = apiController else { return }
+            apiController.childIndex = childIndex
+        }
+        
+    }
+    
 }
+
+//
+// MARK: - Extensions
+//
+
 
 extension ChildViewController: UITableViewDataSource {
     
@@ -49,9 +98,36 @@ extension ChildViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        for food in apiController
         
-        return 0
+        if let child = child,
+            let foodEaten = child.foodEntries {
+            for foodItem in foodEaten {
+                switch foodItem.category {
+                case 0:
+                    proteinCount += 1
+                    return proteinCount
+                case 1:
+                    dairyCount += 1
+                    return dairyCount
+                case 2:
+                    grainsCount += 1
+                    return grainsCount
+                case 3:
+                    vegetableCount += 1
+                    return vegetableCount
+                case 4:
+                    fruitCount += 1
+                    return fruitCount
+                case 5:
+                    sweetsCount += 1
+                    return sweetsCount
+                default:
+                    return 5
+                }
+            }
+        }
+        let sectionCountArray = [proteinCount, dairyCount, grainsCount, vegetableCount, fruitCount, sweetsCount]
+        return sectionCountArray[section]
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -64,39 +140,3 @@ extension ChildViewController: UITableViewDelegate {
     
 }
 
-
-/*
- var proteinCount = 0
- var dairyCount = 0
- var grainsCount = 0
- var vegetableCount = 0
- var fruitCount = 0
- var sweetsCount = 0
- if let apiConroller = apiController {
- for childDetail in apiConroller.childDetailArray {
- for food in childDetail.foodsEaten {
- switch food.category {
- case 0:
- proteinCount += 1
- return proteinCount
- case 1:
- dairyCount += 1
- return dairyCount
- case 2:
- grainsCount += 1
- return grainsCount
- case 3:
- vegetableCount += 1
- return vegetableCount
- case 4:
- fruitCount += 1
- return fruitCount
- case 5:
- sweetsCount += 1
- return sweetsCount
- }
- }
- }
- }
- 
- */

@@ -8,16 +8,16 @@
 
 import Foundation
 
-struct ChildDetail {
-    var child: Child
+struct Child: Codable {
+    var name: String
     var favoriteFoods: String
     var foodAllergies: String
-    var foodsEaten: [FoodEntry]?
+    var foodEntries: [FoodEntry]?
     
-    init(child: Child, favoriteFoods: String, foodAllergies: String, foodsEaten: FoodEntry?) {
-        self.child = child
+    init(name: String, favoriteFoods: String, foodAllergies: String) {
+        self.name = name
         self.favoriteFoods = favoriteFoods
         self.foodAllergies = foodAllergies
-    
+        self.foodEntries = []
     }
 }

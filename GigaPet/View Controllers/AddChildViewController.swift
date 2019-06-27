@@ -41,15 +41,13 @@ class AddChildViewController: UIViewController {
            !newChildFavoriteFood.isEmpty,
            let newChildFoodAllergies = foodAlergiesTextField.text,
            let apiController = apiController {
-            let newChild = Child(name: newChildName)
-            apiController.addChild(newChild: newChild) { error in
+            let newChild = Child(name: newChildName, favoriteFoods: newChildFavoriteFood, foodAllergies: newChildFoodAllergies)
+                apiController.addChild(newChild: newChild) { error in
                 if let error = error {
                     print("ERROR OCCURED ADDING NEW CHILD: \(error)")
                 }
                 DispatchQueue.main.async {
-                    self.navigationController?.popViewController(animated: true)
-                    let newDetailChild = ChildDetail(child: newChild, favoriteFoods: newChildFavoriteFood, foodAllergies: newChildFoodAllergies, foodsEaten: nil)
-                    apiController.childDetailArray.append(newDetailChild)
+                    self.dismiss(animated: true, completion: nil)
                 }
             }
             
