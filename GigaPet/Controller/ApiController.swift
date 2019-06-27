@@ -39,16 +39,16 @@ class ApiController {
     //MARK: - Properties
     //
     
-    private let baseUrl = URL(string: "http://bw-gigapet.herokuapp.com/")!
+    private let baseUrl = URL(string: "https://bw-gigapet.herokuapp.com/")!
     var bearer: Bearer?
-    var children: [Child] = []
-    var childDetailArray: [ChildDetail] = []
-    
+    //var children: [Child] = []
+    var parent: Parent?
+    var childIndex: Int?
     //
     // MARK: - SignUp Function
     //
     
-    func signUp(with user: User, completion: @escaping (Error?) -> ()) {
+    func signUp(with parent: Parent, completion: @escaping (Error?) -> ()) {
         let signUpUrl = baseUrl.appendingPathComponent("createnewuser")
         
         var request = URLRequest(url: signUpUrl)
@@ -57,7 +57,7 @@ class ApiController {
         
         let jsonEncoder = JSONEncoder()
         do {
-            let jsonData = try jsonEncoder.encode(user)
+            let jsonData = try jsonEncoder.encode(parent)
             request.httpBody = jsonData
         }catch {
             print("Error encoding user Object: \(error)")
@@ -83,7 +83,7 @@ class ApiController {
     // MARK: - SignIn Function
     //
     
-    func signIn(with user: User, completion: @escaping (Error?) -> ()) {
+    func signIn(with parent: Parent, completion: @escaping (Error?) -> ()) {
         
         let signInUrl = baseUrl.appendingPathComponent("ADDED PLACEHOLDER FOR ENDPOINT")
         
@@ -93,7 +93,7 @@ class ApiController {
         
         let jsonEncoder = JSONEncoder()
         do {
-            let jsonData = try jsonEncoder.encode(user) //user has to conform to codable
+            let jsonData = try jsonEncoder.encode(parent) //user has to conform to codable
             request.httpBody = jsonData
         }catch{
             print("error encoding user object: \(error)")
@@ -133,48 +133,48 @@ class ApiController {
     // MARK: - Fetch all children Function
     //
     
-    func fetchAllChildren(completion: @escaping (Result<[Child], NetWorkError>) -> Void) {
-        guard let bearer = bearer else {
-            completion(.failure(.noAuth))
-            return
-        }
-        let allChildrenUrl = baseUrl.appendingPathComponent("ADDED PLACEHOLDER FOR ENDPOINT")
-            completion(.failure(.otherError))
+ //  func fetchAllChildren(completion: @escaping (Result<[Child], NetWorkError>) -> Void) {
+ //      guard let bearer = bearer else {
+ //          completion(.failure(.noAuth))
+ //          return
+ //      }
+ //      let allChildrenUrl = baseUrl.appendingPathComponent("ADDED PLACEHOLDER FOR ENDPOINT")
+ //          completion(.failure(.otherError))
 
-        
-        var request = URLRequest(url: allChildrenUrl)
-        request.httpMethod = HTTPMethod.get.rawValue
-        request.addValue("ADDED PLACEHOLDER FOR BEARER TOKEN \(bearer.token)", forHTTPHeaderField: "Authorization")
-        
-        URLSession.shared.dataTask(with: request) { (data, response, error) in
-            
-            if let response = response as? HTTPURLResponse,
-                response.statusCode == 401 {
-                completion(.failure(.badAuth))
-                return
-            }
-            
-            if let _ = error {
-                completion(.failure(.otherError))
-                return
-            }
-            
-            guard let data = data else {
-                completion(.failure(.badData))
-                return
-            }
-            
-            let decoder = JSONDecoder()
-            
-            do {
-                let children = try decoder.decode([Child].self, from: data)
-                completion(.success(children))
-            }catch {
-                completion(.failure(.noDecode))
-                return
-            }
-        }.resume()
-    }
+ //
+ //      var request = URLRequest(url: allChildrenUrl)
+ //      request.httpMethod = HTTPMethod.get.rawValue
+ //      request.addValue("ADDED PLACEHOLDER FOR BEARER TOKEN \(bearer.token)", forHTTPHeaderField: "Authorization")
+ //
+ //      URLSession.shared.dataTask(with: request) { (data, response, error) in
+ //
+ //          if let response = response as? HTTPURLResponse,
+ //              response.statusCode == 401 {
+ //              completion(.failure(.badAuth))
+ //              return
+ //          }
+ //
+ //          if let _ = error {
+ //              completion(.failure(.otherError))
+ //              return
+ //          }
+ //
+ //          guard let data = data else {
+ //              completion(.failure(.badData))
+ //              return
+ //          }
+ //
+ //          let decoder = JSONDecoder()
+ //
+ //          do {
+ //              let children = try decoder.decode([Child].self, from: data)
+ //              completion(.success(children))
+ //          }catch {
+ //              completion(.failure(.noDecode))
+ //              return
+ //          }
+ //      }.resume()
+ //  }
     
     //
     // MARK: - Add Child
@@ -205,6 +205,7 @@ class ApiController {
         
         URLSession.shared.dataTask(with: request) { (data, response, error) in
             
+            
             if let response = response as? HTTPURLResponse,
                 response.statusCode != 200 { //error response 200 is OK or sucessful response
                 completion(NSError(domain: "", code: response.statusCode, userInfo: nil))
@@ -223,15 +224,66 @@ class ApiController {
             do {
                 let decoder = JSONDecoder()
                 let newChild = try decoder.decode(Child.self, from: data)
-                self.children.append(newChild)
+                self.parent!.children!.append(newChild)
             }catch {
                 completion(error)
             }
-        }
+        }.resume()
     }
     
-    func addFoodItem (foodItem: FoodEntry, completion: @escaping(Error?) -> Void) {
+    func addFoodItem (foodItem: FoodEntry, for: Child, completion: @escaping(Error?) -> Void) {
+        //decoder.dateDecodingStrategy = .iso8601
+        guard let bearer = bearer else {
+            print("Error getting token")
+            return
+        }
         
+        let newChildUrl = baseUrl.appendingPathComponent("ADDED PLACEHOLDER FOR ENDPOINT")
         
+        var request = URLRequest(url: newChildUrl)
+        request.httpMethod = HTTPMethod.post.rawValue
+        request.addValue("ADDED PLACEHOLER \(bearer.token)", forHTTPHeaderField: "Authorization")
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        
+        let jsonEncoder = JSONEncoder()
+            jsonEncoder.dateEncodingStrategy = .iso8601
+        
+        do {
+            let jsonData = try jsonEncoder.encode(foodItem)
+            request.httpBody = jsonData
+        }catch {
+            print("error Encoding Data")
+        }
+        
+        URLSession.shared.dataTask(with: request) { (data, response, error) in
+            
+            
+            if let response = response as? HTTPURLResponse,
+                response.statusCode != 200 { //error response 200 is OK or sucessful response
+                completion(NSError(domain: "", code: response.statusCode, userInfo: nil))
+                return
+            }
+            if let error = error {
+                completion(error)
+                return
+            }
+            
+            guard let data = data else {
+                print("error no data")
+                return
+            }
+            
+            do {
+                let decoder = JSONDecoder()
+                let newFoodItem = try decoder.decode(FoodEntry.self, from: data)
+                guard let parent = self.parent,
+                      let children = parent.children,
+                      let childIndex = self.childIndex else { return }
+                var selectedChild = children[childIndex]
+                selectedChild.foodsEaten?.append(newFoodItem)
+            }catch {
+                completion(error)
+            }
+            }.resume()
     }
 }

@@ -10,6 +10,9 @@ import UIKit
 
 class ChildCollectionViewCell: UICollectionViewCell {
     
+    var apiController: ApiController?
+    
     @IBOutlet weak var childName: UILabel!
+    @IBOutlet weak var childImage: UIImageView!
     
 }

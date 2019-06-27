@@ -10,15 +10,14 @@ import UIKit
 
 private let reuseIdentifier = "ChildCell"
 private var apiController = ApiController()
+var childIndex: Int?
 
 class ParentPortalCollectionViewController: UICollectionViewController {
     
     //
     // MARK: - IBOutlets and Properties
     //
-    
-    @IBOutlet weak var childName: UILabel!
-    @IBOutlet weak var childImage: UIImageView!
+
 
     //
     // MARK: - View LifeCycle
@@ -43,7 +42,12 @@ class ParentPortalCollectionViewController: UICollectionViewController {
     //
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return apiController.children.count
+        var childrenCount = 0
+       if let parent = apiController.parent,
+          let children = parent.children {
+            childrenCount = children.count
+        }
+        return childrenCount
     }
     var indexpath: Int = 0
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -80,8 +84,11 @@ class ParentPortalCollectionViewController: UICollectionViewController {
             
             if let detailVC = segue.destination as? ChildViewController {
                 if let indexPathArray = collectionView.indexPathsForSelectedItems,
-                   let indexPath = indexPathArray.first {
-                    detailVC.child = apiController.children[indexPath.row]
+                   let indexPath = indexPathArray.first,
+                   let parent = apiController.parent,
+                   let children = parent.children {
+                    detailVC.child = children[indexPath.row] // DETAIL VIEW child IS NOW FROM APICONTROLLER
+                    detailVC.childIndex = indexPath.row
                 }
                 detailVC.apiController = apiController
             }
@@ -95,23 +102,4 @@ class ParentPortalCollectionViewController: UICollectionViewController {
     @IBAction func unwindToParent(_ sender: UIStoryboardSegue) {
         
     }
-
-    // MARK: UICollectionViewDelegate
-
-    /*
-    // Uncomment this method to specify if the specified item should be highlighted during tracking
-    override func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    */
-
-    /*
-    // Uncomment this method to specify if the specified item should be selected
-    override func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    */
-
-   
-
 }

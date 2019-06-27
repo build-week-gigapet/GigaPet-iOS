@@ -44,11 +44,11 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
            !username.isEmpty,
            let password = passwordTextField.text,
            !password.isEmpty {
-            let user = User(username: username, password: password)
+            let parent = Parent(username: username, password: password)
             if loginType == .signUp {
-                apiController.signUp(with: user) { error in
+                apiController.signUp(with: parent) { error in
                     if let error = error {
-                        print("ERROR OCCURED FURING SIGN UP: \(error)")
+                        print("ERROR OCCURED DURING SIGN UP: \(error)")
                     }else {
                         DispatchQueue.main.async {
                             let alertController = UIAlertController(title: "Sign Up Sucessful", message: "Now Please Log In", preferredStyle: .alert)
@@ -63,7 +63,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                     }
                 }
             }else {
-                apiController.signIn(with: user) { error in
+                apiController.signIn(with: parent) { error in
                     if let error = error {
                         print("ERROR DURING SIGN IN: \(error)")
                     }else {

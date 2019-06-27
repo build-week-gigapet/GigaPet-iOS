@@ -51,17 +51,24 @@
                                     <state key="normal" title="Logout" backgroundImage="Purple Rectangle">
                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </state>
+                                    <connections>
+                                        <segue destination="tGT-pB-0yM" kind="unwind" unwindAction="unwindToChild:" id="AVt-Kw-9Wx"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jBf-uJ-O8k">
                                     <rect key="frame" x="308" y="760" width="84" height="84"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <state key="normal" backgroundImage="Button"/>
+                                    <connections>
+                                        <action selector="addChildButtonPressed:" destination="bEz-1C-v1m" eventType="touchUpInside" id="KYk-xY-Exe"/>
+                                        <segue destination="e8B-vc-bm3" kind="show" id="AYA-7l-5QB"/>
+                                    </connections>
                                 </button>
                             </subviews>
                             <color key="backgroundColor" red="0.94901960784313721" green="0.92941176470588238" blue="0.63529411764705879" alpha="1" colorSpace="calibratedRGB"/>
                         </view>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="z2A-bT-Al4">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="ChildCell" id="z2A-bT-Al4">
                                 <rect key="frame" x="0.0" y="108" width="172" height="190"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -104,6 +111,9 @@
                                     <constraint firstAttribute="bottom" secondItem="xk0-1t-vTX" secondAttribute="bottom" id="STE-7Y-bh7"/>
                                     <constraint firstAttribute="trailing" secondItem="xk0-1t-vTX" secondAttribute="trailing" id="kZG-Yl-CCJ"/>
                                 </constraints>
+                                <connections>
+                                    <segue destination="2zS-PH-68j" kind="show" id="7MC-o7-Xxa"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>
@@ -113,17 +123,15 @@
                     </collectionView>
                     <navigationItem key="navigationItem" title="Welcome to Gigapet" id="1t4-Yf-WUE">
                         <barButtonItem key="leftBarButtonItem" title="Logout" id="bzT-fi-hVV"/>
-                        <barButtonItem key="rightBarButtonItem" title="Add Child" id="Qjp-Us-jWD">
-                            <connections>
-                                <segue destination="e8B-vc-bm3" kind="show" identifier="AddChildSegue" id="sr6-hO-0mO"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Add Child" id="Qjp-Us-jWD"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="collectionView" destination="gwU-xU-zTc" id="KZE-Xy-2TA"/>
                         <segue destination="0Ys-Sf-Yuu" kind="presentation" identifier="LoginViewModalSegue" id="0yc-Np-vNV"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sDA-aE-C9Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="tGT-pB-0yM" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="995.65217391304361" y="209.59821428571428"/>
         </scene>
