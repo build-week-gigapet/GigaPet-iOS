@@ -9,10 +9,7 @@
 import Foundation
 
 struct FoodEntry: Codable {
-    var id: Int
     var name: String
     var category: Int
     var date_added: Data
-    var date_updated: Data
-    var is_used: Bool
 }

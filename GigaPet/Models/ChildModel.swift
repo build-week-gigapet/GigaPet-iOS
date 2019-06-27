@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Child {
+struct Child: Codable {
     var name: String
     var favoriteFoods: String
     var foodAllergies: String
