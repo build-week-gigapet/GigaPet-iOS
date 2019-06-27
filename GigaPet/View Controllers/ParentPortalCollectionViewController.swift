@@ -10,6 +10,7 @@ import UIKit
 
 private let reuseIdentifier = "ChildCell"
 private var apiController = ApiController()
+var childIndex: Int?
 
 class ParentPortalCollectionViewController: UICollectionViewController {
     
@@ -17,8 +18,6 @@ class ParentPortalCollectionViewController: UICollectionViewController {
     // MARK: - IBOutlets and Properties
     //
     
-    @IBOutlet weak var childName: UILabel!
-    @IBOutlet weak var childImage: UIImageView!
 
     //
     // MARK: - View LifeCycle
@@ -80,8 +79,11 @@ class ParentPortalCollectionViewController: UICollectionViewController {
             
             if let detailVC = segue.destination as? ChildViewController {
                 if let indexPathArray = collectionView.indexPathsForSelectedItems,
-                   let indexPath = indexPathArray.first {
-                    detailVC.child = apiController.children[indexPath.row]
+                    let indexPath = indexPathArray.first,
+                    let parent = apiController.parent,
+                    let children = parent.children {
+                    detailVC.child = children[indexPath.row] // DETAIL VIEW child IS NOW FROM APICONTROLLER
+                    detailVC.childIndex = indexPath.row
                 }
                 detailVC.apiController = apiController
             }
