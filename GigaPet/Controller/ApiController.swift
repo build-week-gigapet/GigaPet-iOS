@@ -43,7 +43,7 @@ class ApiController {
     var bearer: Bearer?
     var children: [Child] = []
     var parent: Parent?
-    
+     var childIndex: Int?
     //
     // MARK: - SignUp Function
     //
@@ -224,7 +224,7 @@ class ApiController {
                 let decoder = JSONDecoder()
                 let newChild = try decoder.decode(Child.self, from: data)
                 self.children.append(newChild)
-                self.parent?.children?.append(newChild)
+                self.parent!.children!.append(newChild)
             } catch {
                 completion(error)
             }
@@ -233,6 +233,58 @@ class ApiController {
     
     func addFoodItem (foodItem: FoodEntry, completion: @escaping(Error?) -> Void) {
         
+        guard let bearer = bearer else {
+            print("Error getting token")
+            return
+        }
+        
+        let newFoodUrl = baseUrl.appendingPathComponent("ADDED PLACEHOLDER FOR ENDPOINT")
+        
+        var request = URLRequest(url: newFoodUrl)
+        request.httpMethod = HTTPMethod.post.rawValue
+        request.addValue("ADDED PLACEHOLER \(bearer.token)", forHTTPHeaderField: "Authorization")
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        
+        let jsonEncoder = JSONEncoder()
+        jsonEncoder.dateEncodingStrategy = .iso8601
+        
+        do {
+            let jsonData = try jsonEncoder.encode(foodItem)
+            request.httpBody = jsonData
+        }catch {
+            print("error Encoding Data")
+        }
+        URLSession.shared.dataTask(with: request) { (data, response, error) in
+            
+            guard let data = data else {
+                print("ERROR NO DATA")
+                return
+            }
+            
+            if let response = response as? HTTPURLResponse,
+                response.statusCode != 200 { //error response 200 is OK or sucessful response
+                completion(NSError(domain: "", code: response.statusCode, userInfo: nil))
+                return
+            }
+            
+            if let error = error {
+                completion(error)
+                return
+            }
+            
+            do {
+                let decoder = JSONDecoder()
+                decoder.dateDecodingStrategy = .iso8601
+                let newFoodItem = try decoder.decode(FoodEntry.self, from: data)
+                guard let parent = self.parent,
+                    let children = parent.children,
+                    let childIndex = self.childIndex else { return }
+                var selectedChild = children[childIndex]
+                selectedChild.foodEntries.append(newFoodItem)
+            }catch {
+                completion(error)
+            }
+        }.resume()
         
     }
 }
